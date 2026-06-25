@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">   
+
+<head>
+<meta charset="UTF-8">
+<title>Solicitud Enviada</title>
+
+<style>
+
+header{
+    background:#0066d6;
+    color:white;
+    padding:20px 50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.logo{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    width:100%;
+}
+
+.logo h1{
+    font-size:50px;
+    font-weight:800;
+    margin:0;
+}
+
+.logo p{
+    margin-top:8px;
+    opacity:.9;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f5f5f5;
+}
+
+.contenedor{
+    max-width:700px;
+    margin:60px auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+h2{
+    color:#37a9e1;
+}
+
+.numero{
+    margin:25px 0;
+    font-size:28px;
+    font-weight:bold;
+    color:#2e7d32;
+}
+
+button{
+    background:#37a9e1;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#666;
+    font-size:14px;
+    margin-top:40px;
+}
+
+button:hover{
+    background:#0088c7;
+}
+</style>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <h1> REPROGREEN</h1>
+        <p>Portal de Gestión REPROCANN</p>
+    </div>
+</header>
+
+<div class="contenedor">
+
+<h2>✅ Solicitud enviada correctamente</h2>
+
+<p>Su trámite fue registrado con éxito.</p>
+
+<div class="numero" id="numero"></div>
+
+<button onclick="window.location='index.html'">
+Volver al inicio
+</button>
+
+</div>
+
+<script>
+document.getElementById("numero").innerHTML =
+localStorage.getItem("tramite");
+</script>
+
+<footer>
+    © 2026 REPROGREEN - Portal de Gestión REPROCANN
+</footer>
+
+</body>
+</html>

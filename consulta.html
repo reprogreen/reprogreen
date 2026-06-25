@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Consultar Estado - REPROGREEN</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#eef3f8;
+}
+
+/* HEADER */
+
+header{
+    background:#0066d6;
+    color:white;
+    padding:20px 50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.logo{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.logo h1{
+    font-size:50px;
+    font-weight:800;
+}
+
+.logo p{
+    margin-top:8px;
+    font-size:20px;
+}
+
+/* CONTENIDO */
+
+.container{
+    max-width:700px;
+    margin:50px auto;
+    padding:30px;
+}
+
+.tarjeta{
+    background:white;
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.tarjeta h2{
+    color:#0066d6;
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.tarjeta p{
+    color:#666;
+    margin-bottom:25px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:10px;
+    margin-top:20px;
+}
+
+input{
+    width:100%;
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    margin-top:30px;
+    padding:15px;
+    background:#37a9e1;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#0066d6;
+    transform:translateY(-2px);
+}
+
+.info{
+    margin-top:25px;
+    padding:18px;
+    background:#eef7fd;
+    border-left:5px solid #37a9e1;
+    border-radius:8px;
+    color:#555;
+}
+
+footer{
+    margin-top:50px;
+    text-align:center;
+    color:#777;
+    padding:20px;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#666;
+    font-size:14px;
+    margin-top:40px;
+}
+
+/* CELULAR */
+
+@media(max-width:768px){
+
+header{
+    padding:20px;
+}
+
+.logo h1{
+    font-size:38px;
+}
+
+.logo p{
+    font-size:16px;
+}
+
+.container{
+    padding:15px;
+    margin:30px auto;
+}
+
+.tarjeta{
+    padding:25px;
+}
+
+.tarjeta h2{
+    font-size:28px;
+}
+
+}
+
+</style>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<h1>🌿 REPROGREEN</h1>
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="tarjeta">
+
+<h2>Consultar Estado</h2>
+
+<p>Ingrese el número de trámite para conocer el estado de su solicitud.</p>
+
+<div class="info">
+<strong>Estado:</strong> Consulte el estado actual de su trámite.
+</div>
+
+<label>Número de trámite</label>
+
+<input
+type="text"
+id="tramite"
+placeholder="Ej: REPRO-12345">
+
+<button onclick="consultar()">
+Consultar Estado
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function consultar(){
+
+    let tramite = document.getElementById("tramite").value.trim();
+
+    if(tramite === ""){
+        alert("⚠ Debe ingresar un número de trámite.");
+        return;
+    }
+
+    alert(
+        "❌ No se encontró ningún trámite con ese número.\n\n" +
+        "Verifique el número ingresado e intente nuevamente."
+    );
+
+}
+
+</script>
+
+<footer>
+    © 2026 REPROGREEN - Portal de Gestión REPROCANN
+</footer>
+
+</body>
+</html>

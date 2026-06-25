@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Renovación - REPROGREEN</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#eef3f8;
+}
+
+header{
+    background:#0066d6;
+    color:white;
+    padding:20px 50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.logo{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    width:100%;
+}
+
+.logo h1{
+    font-size:50px;
+    font-weight:800;
+    margin:0;
+}
+
+.logo p{
+    margin-top:8px;
+    opacity:.9;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+}
+
+.container{
+    width:100%;
+    max-width:600px;
+    margin:40px auto;
+}
+
+.tarjeta{
+    width:550px;
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.10);
+}
+
+.info{
+    background:#eaf4ff;
+    color:#0066d6;
+    border-left:5px solid #0066d6;
+    padding:15px;
+    margin:20px 0;
+    border-radius:8px;
+    font-size:15px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    margin-top:8px;
+    margin-bottom:18px;
+    font-size:17px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+button{
+    width:100%;
+    font-size:18px;
+    font-weight:bold;
+    padding:16px;
+    border-radius:10px;
+    transition:0.3s;
+    margin-top:20px;
+    background:#37a9e1;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:5px;
+    cursor:pointer;
+    width:100%;
+}
+
+button:hover{
+    background:#0057b8;
+    transform:translateY(-2px);
+}
+
+.progreso{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:35px auto;
+}
+
+.paso{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    color:#999;
+    font-weight:bold;
+}
+
+.circulo{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#d9d9d9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.linea{
+    width:120px;
+    height:4px;
+    background:#d9d9d9;
+    margin:0 15px;
+    margin-bottom:28px;
+}
+
+.activo .circulo{
+    background:#37a9e1;
+}
+
+.activo{
+    color:#37a9e1;
+}
+
+.datoPago{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#eef7fd;
+    border:1px solid #37a9e1;
+    border-radius:8px;
+    padding:12px 15px;
+    margin-bottom:18px;
+}
+
+.datoPago strong{
+    color:#444;
+}
+
+.datoPago span{
+    color:#0066d6;
+    font-weight:bold;
+}
+
+.datoPago button{
+    width:auto;
+    margin:0;
+    padding:8px 15px;
+    font-size:14px;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#666;
+    font-size:14px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+
+.container{
+    width:95%;
+}
+
+header{
+    padding:20px;
+}
+
+.logo h1{
+    font-size:50px;
+    font-weight:800;
+    margin:0;
+}
+
+.logo p{
+    font-size:20px;
+    margin-top:8px;
+    font-weight:400;
+}
+
+.linea{
+    width:50px;
+}
+}
+
+</style>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <h1>🌿REPROGREEN</h1>
+    </div>
+
+</header>
+
+<div class="progreso">
+
+    <div class="paso activo">
+        <div class="circulo">1</div>
+        <span>Renovacion</span>
+    </div>
+
+    <div class="linea"></div>
+
+    <div class="paso">
+        <div class="circulo">2</div>
+        <span>Pago</span>
+    </div>
+
+    <div class="linea"></div>
+
+    <div class="paso">
+        <div class="circulo">3</div>
+        <span>Confirmación</span>
+    </div>
+
+</div>
+
+<div class="container">
+
+    <div class="tarjeta">
+
+        <h2>Renovación de Inscripción</h2>
+        
+    <div class="info">
+    <strong>Estado:</strong> Complete los datos para iniciar la renovación.
+</div>
+
+<label>Número de trámite</label>
+<input type="text" id="nombre">
+
+<label>DNI</label>
+<input type="text" id="dni">
+
+<label>Teléfono</label>
+<input type="text" id="telefono">
+
+<label>Email</label>
+<input type="email" id="email">
+
+<label>Adjuntar documentación</label>
+<input type="file">
+
+<button onclick="enviarRenovacion()">
+            Enviar Renovación
+        </button>
+
+    </div>
+
+    <div class="tarjeta" id="pago" style="display:none;">
+
+        <h2>Pago del trámite</h2>
+
+<div class="datoPago">
+    <strong>Importe:</strong>
+    <span>$20.000</span>
+</div>
+
+<label>CBU</label>
+
+<div class="datoPago">
+    <span id="cbu">0000003100000000000000</span>
+    <button type="button" onclick="copiarTexto('cbu')">
+        Copiar
+    </button>
+</div>
+
+<label>Alias</label>
+
+<div class="datoPago">
+    <span id="alias">REPROGREEN.PAGOS</span>
+    <button type="button" onclick="copiarTexto('alias')">
+        Copiar
+    </button>
+</div>
+
+<label>Adjuntar comprobante</label>
+<input type="file">
+
+<button onclick="confirmarPago()">
+    Confirmar Pago
+</button>
+
+    </div>
+
+</div>
+
+</div>
+<script>
+
+function enviarRenovacion(){
+
+    let nombre = document.getElementById("nombre").value.trim();
+    let dni = document.getElementById("dni").value.trim();
+    let telefono = document.getElementById("telefono").value.trim();
+    let email = document.getElementById("email").value.trim();
+
+    if(nombre=="" || dni=="" || telefono=="" || email==""){
+        alert("⚠️ Debe completar todos los campos.");
+        return;
+    }
+
+let numero = "REPRO-" + Math.floor(Math.random() * 100000);
+
+localStorage.setItem("tramite", numero);
+document.querySelectorAll(".tarjeta")[0].style.display = "none";
+document.getElementById("pago").style.display = "block";
+document.querySelectorAll(".paso")[1].classList.add("activo");
+
+// window.location = "confirmacion.html";
+}
+
+function confirmarPago(){
+    document.querySelectorAll(".paso")[2].classList.add("activo");
+
+    window.location = "confirmacion.html";
+
+}
+
+</script>
+
+<footer>
+    © 2026 REPROGREEN - Portal de Gestión REPROCANN
+</footer>
+
+</body>
+</html>

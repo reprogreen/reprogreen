@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto - REPROGREEN</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#eef3f8;
+}
+
+header{
+    background:#0066d6;
+    color:white;
+    padding:20px 50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.logo{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    width:100%;
+}
+
+.logo h1{
+    font-size:50px;
+    font-weight:800;
+    margin:0;
+}
+
+.logo p{
+    margin-top:8px;
+    opacity:.9;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+}
+
+.container{
+    width:100%;
+    max-width:600px;
+    margin:40px auto;
+}
+
+.tarjeta{
+    width:550px;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.10);
+}
+
+.info{
+    background:#eaf4ff;
+    color:#0066d6;
+    border-left:5px solid #0066d6;
+    padding:15px;
+    margin:20px 0;
+    border-radius:8px;
+    font-size:15px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    margin-top:8px;
+    margin-bottom:18px;
+    font-size:17px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+textarea{
+    width:100%;
+    min-height:140px;
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    resize:vertical;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    font-size:18px;
+    font-weight:bold;
+    padding:16px;
+    border-radius:10px;
+    transition:0.3s;
+    margin-top:20px;
+    background:#37a9e1;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:5px;
+    cursor:pointer;
+    width:100%;
+}
+
+button:hover{
+    background:#0057b8;
+    transform:translateY(-2px);
+}
+
+.progreso{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:35px auto;
+}
+
+.paso{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    color:#999;
+    font-weight:bold;
+}
+
+.circulo{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#d9d9d9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.linea{
+    width:120px;
+    height:4px;
+    background:#d9d9d9;
+    margin:0 15px;
+    margin-bottom:28px;
+}
+
+.info h3{
+    margin-bottom:15px;
+    color:#0066d6;
+}
+
+.info p{
+    margin:8px 0;
+    line-height:1.6;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#666;
+    font-size:14px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+
+.container{
+    width:95%;
+}
+
+header{
+    padding:20px;
+}
+
+.logo h1{
+    font-size:50px;
+    font-weight:800;
+    margin:0;
+}
+
+.logo p{
+    font-size:20px;
+    margin-top:8px;
+    font-weight:400;
+}
+
+.linea{
+    width:50px;
+}
+}
+
+</style>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <h1>🌿REPROGREEN</h1>
+    </div>
+
+</header>
+
+</div>
+
+<div class="container">
+
+    <div class="tarjeta">
+
+        <h2>Contacto</h2>
+        
+    <div class="info">
+    <strong>Estado:</strong> Complete el formulario y nuestro equipo responderá a la brevedad.
+</div>
+
+<label>Nombre y Apellido</label>
+<input type="text" id="nombre">
+
+<label>Correo electrónico</label>
+<input type="email" id="email">
+
+<label>Asunto</label>
+<input type="text" id="asunto">
+
+<label>Mensaje</label>
+<textarea id="mensaje" rows="6"></textarea>
+
+<div class="info">
+<h3>📞 Atención al Ciudadano</h3>
+
+<p><strong>Teléfono:</strong> (011) XXXX-XXXX</p>
+<p><strong>WhatsApp:</strong> +54 9 11 XXXX-XXXX</p>
+<p><strong>Correo:</strong> contacto@reprogreen.com</p>
+<p><strong>Horario:</strong> Lunes a Viernes de 08:00 a 17:00 hs.</p>
+</div>
+
+<button onclick="enviarMensaje()">
+            Enviar Mensaje
+        </button>
+
+</div>
+<script>
+
+function enviarMensaje(){
+
+    let nombre = document.getElementById("nombre").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let asunto = document.getElementById("asunto").value.trim();
+    let mensaje = document.getElementById("mensaje").value.trim();
+
+    if(nombre=="" || email=="" || asunto=="" || mensaje==""){
+        alert("⚠ Debe completar todos los campos.");
+        return;
+    }
+
+    alert("✅ Mensaje enviado correctamente.\n\nNos comunicaremos con usted a la brevedad.");
+
+    window.location.href="index.html";
+
+}
+
+</script>
+
+<footer>
+    © 2026 REPROGREEN - Portal de Gestión REPROCANN
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>REPROGREEN - Portal REPROCANN</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#eef3f8;
+    color:#333;
+}
+
+/* HEADER */
+
+header{
+    background:#0066d6;
+    color:white;
+    padding:18px 30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.10);
+}
+
+.logo{
+    text-align:center;
+}
+
+.logo h1{
+    font-size:48px;
+    font-weight:800;
+}
+
+.logo p{
+    margin-top:8px;
+    color:#dbe9ff;
+    font-size:18px;
+}
+
+/* HERO */
+
+.hero{
+    max-width:1200px;
+    margin:35px auto;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    padding:50px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h2{
+    font-size:60px;
+    color:#0066d6;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:22px;
+    color:#555;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.hero-info{
+    display:flex;
+    gap:25px;
+    font-weight:bold;
+    color:#0066d6;
+    flex-wrap:wrap;
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:500px;
+}
+
+/* TARJETAS */
+
+.cards{
+    max-width:1200px;
+    margin:30px auto 60px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.card h3{
+    color:#003366;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.6;
+    margin-bottom:25px;
+    min-height:70px;
+}
+
+.card button{
+    width:100%;
+    padding:14px;
+    background:#0066d6;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.card button:hover{
+    background:#0053b3;
+}
+
+/* FOOTER */
+
+footer{
+    background:white;
+    padding:25px;
+    text-align:center;
+    color:#666;
+    border-top:1px solid #ddd;
+}
+
+/* CELULARES */
+
+@media (max-width:900px){
+
+header{
+    padding:18px;
+}
+
+.logo h1{
+    font-size:34px;
+}
+
+.logo p{
+    font-size:15px;
+}
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    margin:20px;
+    padding:25px;
+}
+
+.hero-text h2{
+    font-size:42px;
+}
+
+.hero-text p{
+    font-size:18px;
+}
+
+.hero-info{
+    justify-content:center;
+    gap:15px;
+    font-size:15px;
+}
+
+.hero-image img{
+    max-width:280px;
+}
+
+.cards{
+    grid-template-columns:1fr;
+    margin:20px;
+}
+
+.card{
+    padding:28px;
+}
+
+.card h3{
+    font-size:24px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<h1>🌿 REPROGREEN</h1>
+<p>Portal de Gestión REPROCANN</p>
+</div>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h2>Portal de Gestión<br>REPROCANN</h2>
+
+        <p>
+            Sistema oficial para la gestión de trámites del
+            Registro del Programa de Cannabis (REPROCANN).
+        </p>
+
+        <div class="hero-info">
+            <span>🔒 Seguro</span>
+            <span>✔ Confiable</span>
+            <span>⚡ Rápido</span>
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+        <img src="img/reprocann.png" alt="REPROCANN">
+    </div>
+
+</section>
+
+<section class="cards">
+
+    <div class="card">
+
+        <h3>📝 Nueva Solicitud</h3>
+
+        <p>
+            Iniciá tu trámite de inscripción en REPROGREEN.
+        </p>
+
+        <button onclick="window.location.href='solicitud.html'">
+            Iniciar Solicitud
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h3>🔍 Consultar Estado</h3>
+
+        <p>
+            Consultá el estado actual de tu trámite.
+        </p>
+
+        <button onclick="window.location.href='consulta.html'">
+            Consultar Estado
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h3>🔄 Renovación</h3>
+
+        <p>
+            Renová tu inscripción de manera rápida y sencilla.
+        </p>
+
+        <button onclick="window.location.href='renovacion.html'">
+            Renovar
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h3>📩 Contacto</h3>
+
+        <p>
+            Comunicate con nuestro equipo para consultas o asistencia.
+        </p>
+
+        <button onclick="window.location.href='contacto.html'">
+            Contactar
+        </button>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 REPROGREEN - Portal de Gestión REPROCANN
+</footer>
+
+</body>
+</html>
