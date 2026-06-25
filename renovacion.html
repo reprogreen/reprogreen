@@ -267,27 +267,46 @@ header{
     <div class="tarjeta">
 
         <h2>Renovación de Inscripción</h2>
-        
-    <div class="info">
-    <strong>Estado:</strong> Complete los datos para iniciar la renovación.
-</div>
 
-<label>Número de trámite</label>
-<input type="text" id="nombre">
+        <div class="info">
+            <strong>Estado:</strong> Complete los datos para iniciar la renovación.
+        </div>
 
-<label>DNI</label>
-<input type="text" id="dni">
+        <label>Número de trámite</label>
+        <input type="text"
+               id="tramite"
+               name="tramite"
+               placeholder="Ej: EX-2026-12345678 o N° de trámite"
+               maxlength="40"
+               autocomplete="off">
 
-<label>Teléfono</label>
-<input type="text" id="telefono">
+        <small>Ingresá el número de trámite asignado por REPROCANN.</small>
 
-<label>Email</label>
-<input type="email" id="email">
+        <label>DNI</label>
+        <input type="text"
+               id="dni"
+               name="dni"
+               inputmode="numeric"
+               placeholder="Ej: 30123456">
 
-<label>Adjuntar documentación</label>
-<input type="file">
+        <label>Teléfono</label>
+        <input type="tel"
+               id="telefono"
+               name="telefono"
+               inputmode="numeric"
+               placeholder="Ej: 1112345678">
 
-<button onclick="enviarRenovacion()">
+        <label>Email</label>
+        <input type="email"
+               id="email"
+               name="email"
+               placeholder="Ej: nombre@gmail.com"
+               autocomplete="email">
+
+        <label>Adjuntar documentación</label>
+        <input type="file" id="archivoRenovacion">
+
+        <button type="button" onclick="enviarRenovacion()">
             Enviar Renovación
         </button>
 
@@ -297,72 +316,39 @@ header{
 
         <h2>Pago del trámite</h2>
 
-<div class="datoPago">
-    <strong>Importe:</strong>
-    <span>$20.000</span>
-</div>
+        <div class="datoPago">
+            <strong>Importe:</strong>
+            <span>$20.000</span>
+        </div>
 
-<label>CBU</label>
+        <label>CBU</label>
 
-<div class="datoPago">
-    <span id="cbu">0000003100000000000000</span>
-    <button type="button" onclick="copiarTexto('cbu')">
-        Copiar
-    </button>
-</div>
+        <div class="datoPago">
+            <span id="cbu">0000003100000000000000</span>
+            <button type="button" onclick="copiarTexto('cbu')">
+                Copiar
+            </button>
+        </div>
 
-<label>Alias</label>
+        <label>Alias</label>
 
-<div class="datoPago">
-    <span id="alias">REPROGREEN.PAGOS</span>
-    <button type="button" onclick="copiarTexto('alias')">
-        Copiar
-    </button>
-</div>
+        <div class="datoPago">
+            <span id="alias">REPROGREEN.PAGOS</span>
+            <button type="button" onclick="copiarTexto('alias')">
+                Copiar
+            </button>
+        </div>
 
-<label>Adjuntar comprobante</label>
-<input type="file">
+        <label>Adjuntar comprobante</label>
+        <input type="file" id="documentacion">
 
-<button onclick="confirmarPago()">
-    Confirmar Pago
-</button>
+        <button type="button" onclick="confirmarPago()">
+            Confirmar Pago
+        </button>
 
     </div>
 
 </div>
-
-</div>
-<script>
-
-function enviarRenovacion(){
-
-    let nombre = document.getElementById("nombre").value.trim();
-    let dni = document.getElementById("dni").value.trim();
-    let telefono = document.getElementById("telefono").value.trim();
-    let email = document.getElementById("email").value.trim();
-
-    if(nombre=="" || dni=="" || telefono=="" || email==""){
-        alert("⚠️ Debe completar todos los campos.");
-        return;
-    }
-
-let numero = "REPRO-" + Math.floor(Math.random() * 100000);
-
-localStorage.setItem("tramite", numero);
-document.querySelectorAll(".tarjeta")[0].style.display = "none";
-document.getElementById("pago").style.display = "block";
-document.querySelectorAll(".paso")[1].classList.add("activo");
-
-// window.location = "confirmacion.html";
-}
-
-function confirmarPago(){
-    document.querySelectorAll(".paso")[2].classList.add("activo");
-
-    window.location = "confirmacion.html";
-
-}
-
 </script>
 
 <footer>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,207 +14,337 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-    background:#eef3f8;
+    background:linear-gradient(180deg,#f4f8fb,#edf3f8);
     color:#333;
 }
 
-/* HEADER */
-
-header{
-    background:#0066d6;
-    color:white;
-    padding:18px 30px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    box-shadow:0 2px 10px rgba(0,0,0,.10);
-}
-
-.logo{
-    text-align:center;
-}
-
-.logo h1{
-    font-size:48px;
-    font-weight:800;
-}
-
-.logo p{
-    margin-top:8px;
-    color:#dbe9ff;
-    font-size:18px;
-}
-
-/* HERO */
+/*==========================
+BANNER
+==========================*/
 
 .hero{
-    max-width:1200px;
-    margin:35px auto;
-    background:white;
-    border-radius:20px;
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-    padding:50px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:40px;
+
+    max-width:1300px;
+
+    margin:0 auto 15px;
+
+    padding:0;
+
+    overflow:hidden;
+
+    border-radius:0;
+
 }
 
-.hero-text{
-    flex:1;
-}
+.hero picture,
+.hero img{
 
-.hero-text h2{
-    font-size:60px;
-    color:#0066d6;
-    line-height:1.1;
-    margin-bottom:20px;
-}
-
-.hero-text p{
-    font-size:22px;
-    color:#555;
-    line-height:1.6;
-    margin-bottom:25px;
-}
-
-.hero-info{
-    display:flex;
-    gap:25px;
-    font-weight:bold;
-    color:#0066d6;
-    flex-wrap:wrap;
-}
-
-.hero-image{
-    flex:1;
-    text-align:center;
-}
-
-.hero-image img{
     width:100%;
-    max-width:500px;
+
+    height:280px;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    display:block;
+
 }
 
-/* TARJETAS */
+/*==========================
+CARDS
+==========================*/
 
 .cards{
-    max-width:1200px;
-    margin:30px auto 60px;
+
+    max-width:1300px;
+
+    margin:15px auto 20px;
+
+    padding:0 20px;
+
     display:grid;
+
     grid-template-columns:repeat(4,1fr);
+
     gap:25px;
+
 }
 
 .card{
-    background:white;
-    border-radius:18px;
+
+    background:#fff;
+
+    border-radius:22px;
+
     padding:35px;
+
     text-align:center;
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-    transition:.3s;
+
+    border-top:6px solid #1E7D32;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.25s;
+
 }
 
 .card:hover{
+
     transform:translateY(-8px);
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
+
+}
+
+.card img{
+
+    width:72px;
+    height:72px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 22px;
+
 }
 
 .card h3{
-    color:#003366;
+
+    color:#004b99;
+
+    font-size:27px;
+
     margin-bottom:15px;
-    font-size:28px;
+
 }
 
 .card p{
+
     color:#666;
-    line-height:1.6;
+
+    line-height:1.7;
+
+    min-height:78px;
+
     margin-bottom:25px;
-    min-height:70px;
+
 }
 
 .card button{
+
     width:100%;
-    padding:14px;
-    background:#0066d6;
-    color:white;
+
     border:none;
-    border-radius:10px;
-    font-size:17px;
+
+    background:#1E7D32;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-weight:700;
+
     cursor:pointer;
-    transition:.3s;
+
+    transition:.25s;
+
+    box-shadow:0 6px 18px rgba(30,125,50,.25);
+
 }
 
 .card button:hover{
-    background:#0053b3;
+
+    background:#176728;
+
+    transform:translateY(-2px);
+
 }
 
-/* FOOTER */
+/*==========================
+INFO
+==========================*/
+
+.info{
+
+    max-width:1300px;
+
+    margin:0 auto 30px;
+
+    padding:0 20px;
+
+}
+
+.info-box{
+
+    background:#fff;
+
+    border-left:6px solid #1E7D32;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.info-box h2{
+
+    color:#1E6F3D;
+
+    font-size:22px;
+
+    margin-bottom:12px;
+
+}
+
+.info-box p{
+
+    color:#555;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+.info-contenido{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:28px;
+
+}
+
+.info-icono{
+
+    width:58px;
+
+    height:58px;
+
+    min-width:58px;
+
+    border-radius:50%;
+
+    background:#1E6F3D;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    font-family:Georgia,serif;
+
+}
+
+/*==========================
+FOOTER
+==========================*/
 
 footer{
-    background:white;
-    padding:25px;
+
+    background:#1E6F3D;
+
+    color:white;
+
     text-align:center;
-    color:#666;
-    border-top:1px solid #ddd;
+
+    padding:35px 20px;
+
+    margin-top:25px;
+
 }
 
-/* CELULARES */
+footer strong{
 
-@media (max-width:900px){
+    display:block;
 
-header{
-    padding:18px;
+    font-size:20px;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+
 }
 
-.logo h1{
-    font-size:34px;
+footer p{
+
+    margin:8px 0;
+
+    font-size:16px;
+
 }
 
-.logo p{
+footer small{
+
     font-size:15px;
+
+    opacity:.95;
+
+}
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:900px){
+
+.cards{
+
+grid-template-columns:1fr;
+
+padding:20px;
+
 }
 
 .hero{
-    flex-direction:column;
-    text-align:center;
-    margin:20px;
-    padding:25px;
-}
 
-.hero-text h2{
-    font-size:42px;
-}
+margin:20px auto;
 
-.hero-text p{
-    font-size:18px;
-}
+padding:0 15px;
 
-.hero-info{
-    justify-content:center;
-    gap:15px;
-    font-size:15px;
-}
-
-.hero-image img{
-    max-width:280px;
-}
-
-.cards{
-    grid-template-columns:1fr;
-    margin:20px;
 }
 
 .card{
-    padding:28px;
+
+padding:30px;
+
 }
 
 .card h3{
-    font-size:24px;
+
+font-size:24px;
+
+}
+
+.logo-header{
+
+width:100%;
+
+}
+
+.info-contenido{
+
+    flex-direction:column;
+
+    text-align:center;
+
 }
 
 }
@@ -223,35 +355,19 @@ header{
 
 <body>
 
-<header>
-
-<div class="logo">
-<h1>🌿 REPROGREEN</h1>
-<p>Portal de Gestión REPROCANN</p>
-</div>
-
-</header>
-
 <section class="hero">
 
-    <div class="hero-text">
+    <picture>
 
-        <h2>Portal de Gestión<br>REPROCANN</h2>
+        <!-- Banner para celular -->
+        <source media="(max-width:768px)"
+                srcset="img/bannermobile.png">
 
-        <p>
-            Sistema oficial para la gestión de trámites del
-            Registro del Programa de Cannabis (REPROCANN).
-        </p>
+        <!-- Banner para PC -->
+        <img src="img/banner.png"
+             alt="Portal REPROGREEN">
 
-        <div style="display:flex; justify-content:center; align-items:center; gap:15px; flex-wrap:wrap; margin-top:15px;">
-    <strong style="color:#0d6efd;">RESPALDO LEGAL</strong>
-    <span style="color:#0d6efd;">•</span>
-    <strong style="color:#0d6efd;">GESTIÓN ONLINE</strong>
-</div>
-
-    <div class="hero-image">
-        <img src="img/reprocann.png" alt="REPROCANN">
-    </div>
+    </picture>
 
 </section>
 
@@ -259,10 +375,14 @@ header{
 
     <div class="card">
 
-        <h3>📝 Nueva Solicitud</h3>
+        <img src="img/iconosolicitud.png"
+             alt="Nueva Solicitud">
+
+        <h3>Nueva Solicitud</h3>
 
         <p>
-            Iniciá tu trámite de inscripción en REPROGREEN.
+            Iniciá tu trámite de inscripción de forma rápida,
+            segura y completamente online.
         </p>
 
         <button onclick="window.location.href='solicitud.html'">
@@ -273,10 +393,14 @@ header{
 
     <div class="card">
 
-        <h3>🔍 Consultar Estado</h3>
+        <img src="img/iconoconsulta.png"
+             alt="Consultar Estado">
+
+        <h3>Consultar Estado</h3>
 
         <p>
-            Consultá el estado actual de tu trámite.
+            Consultá el estado actual de tu trámite
+            ingresando tu número de gestión.
         </p>
 
         <button onclick="window.location.href='consulta.html'">
@@ -287,24 +411,32 @@ header{
 
     <div class="card">
 
-        <h3>🔄 Renovación</h3>
+        <img src="img/iconorenovacion.png"
+             alt="Renovación">
+
+        <h3>Renovación</h3>
 
         <p>
-            Renová tu inscripción de manera rápida y sencilla.
+            Renová tu inscripción de manera simple,
+            segura y desde cualquier lugar.
         </p>
 
         <button onclick="window.location.href='renovacion.html'">
-            Renovar
+            Renovar Inscripción
         </button>
 
     </div>
 
     <div class="card">
 
-        <h3>📩 Contacto</h3>
+        <img src="img/iconocontacto.png"
+             alt="Contacto">
+
+        <h3>Contacto</h3>
 
         <p>
-            Comunicate con nuestro equipo para consultas o asistencia.
+            Comunicate con nuestro equipo para recibir
+            asistencia y resolver tus consultas.
         </p>
 
         <button onclick="window.location.href='contacto.html'">
@@ -315,9 +447,47 @@ header{
 
 </section>
 
+<section class="info">
+
+    <div class="info-box">
+
+        <div class="info-contenido">
+
+            <div class="info-icono">
+                i
+            </div>
+
+            <div>
+
+                <h2>Información importante</h2>
+
+                <p>
+
+                    REPROGREEN brinda una plataforma para la gestión y seguimiento de trámites relacionados con REPROCANN, facilitando la carga de documentación, el seguimiento de solicitudes y la comunicación durante todo el proceso.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 <footer>
-    © 2026 REPROGREEN - Portal de Gestión REPROCANN
+
+<p style="font-size:22px;margin-top:10px;">
+Portal de Gestión REPROCANN
+</p>
+
+<small style="font-size:17px;">
+© 2026 Todos los derechos reservados.
+</small>
+
 </footer>
 
 </body>
+
 </html>
+

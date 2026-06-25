@@ -282,16 +282,44 @@ header{
 </div>
 
 <label>Nombre y Apellido</label>
-<input type="text" id="nombre">
+<input type="text" id="nombre" name="nombre"
+placeholder="Ej: Juan Pérez"
+pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,60}"
+title="Ingrese solo letras y espacios."
+required>
 
 <label>DNI</label>
-<input type="text" id="dni">
+<input
+type="text"
+id="dni"
+name="dni"
+inputmode="numeric"
+placeholder="Ej: 30123456"
+pattern="[0-9]{7,8}"
+title="Ingrese un DNI válido."
+required>
 
 <label>Teléfono</label>
-<input type="text" id="telefono">
+<input
+type="tel"
+id="telefono"
+name="telefono"
+inputmode="numeric"
+placeholder="Ej: 1112345678"
+pattern="[0-9]{10,15}"
+title="Ingrese un teléfono válido."
+required>
 
 <label>Email</label>
-<input type="email" id="email">
+<input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="Ej: nombre@gmail.com"
+    required
+    autocomplete="email"
+    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+    title="Ingresá un correo electrónico válido.">
 
 <button onclick="enviarSolicitud()">
             Enviar Solicitud
@@ -327,7 +355,7 @@ header{
 </div>
 
 <label>Adjuntar comprobante</label>
-<input type="file">
+<input type="file" id="comprobante" required>
 
 <button onclick="confirmarPago()">
     Confirmar Pago
@@ -352,6 +380,34 @@ function enviarSolicitud(){
         return;
     }
 
+    // Validar nombre y apellido
+if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ]+(?:\s+[A-Za-zÁÉÍÓÚáéíóúÑñ]+)+$/.test(nombre)) {
+    alert("⚠️ Ingresá nombre y apellido.");
+    document.getElementById("nombre").focus();
+    return;
+}
+
+// Validar DNI (7 u 8 números)
+if (!/^\d{7,8}$/.test(dni)) {
+    alert("⚠️ El DNI debe contener 7 u 8 números.");
+    document.getElementById("dni").focus();
+    return;
+}
+
+// Validar teléfono (8 a 15 números)
+if (!/^\d{8,15}$/.test(telefono)) {
+    alert("⚠️ Ingresá un teléfono válido.");
+    document.getElementById("telefono").focus();
+    return;
+}
+
+// Validar email
+if (!document.getElementById("email").checkValidity()) {
+    alert("⚠️ Ingresá un correo electrónico válido.");
+    document.getElementById("email").focus();
+    return;
+}
+
 let numero = "REPRO-" + Math.floor(Math.random() * 100000);
 
 localStorage.setItem("tramite", numero);
@@ -363,6 +419,13 @@ document.querySelectorAll(".paso")[1].classList.add("activo");
 }
 
 function confirmarPago(){
+let comprobante = document.getElementById("comprobante");
+
+if (comprobante.files.length === 0) {
+    alert("⚠️ Debe adjuntar el comprobante de pago.");
+    comprobante.focus();
+    return;
+}
     document.querySelectorAll(".paso")[2].classList.add("activo");
 
     window.location = "confirmacion.html";
