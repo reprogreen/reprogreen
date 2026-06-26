@@ -245,31 +245,32 @@ RESPONSIVE
 body{
 
     background:#eef3f8 url("img/fondomobile.png") no-repeat top center;
-
     background-size:100% auto;
-
     background-attachment:scroll;
 
 }
 
 .container{
 
-    padding:0 15px 20px;
-    margin-top:0;
+    width:100%;
+    max-width:620px;
 
-}
+    margin:45px auto 25px;
 
-.logo{
-
-    max-width:340px;
+    padding:0 15px;
 
 }
 
 .tarjeta{
 
+    width:100%;
+    max-width:100%;
+
     padding:22px;
+
     border-radius:18px;
-    margin-top:0;
+
+    margin:0 auto;
 
 }
 
@@ -277,24 +278,49 @@ body{
 
     font-size:24px;
 
-}
-
-.progreso{
-
-    transform:scale(.90);
-    margin:10px auto 8px;
+    margin-bottom:20px;
 
 }
 
-.linea{
+.info{
 
-    width:45px;
+    padding:16px;
+
+}
+
+label{
+
+    font-size:15px;
+
+}
+
+input,
+textarea{
+
+    width:100%;
+    font-size:16px;
+
+}
+
+textarea{
+
+    min-height:160px;
 
 }
 
 button{
 
+    width:100%;
+
     font-size:16px;
+
+    padding:15px;
+
+}
+
+footer{
+
+    margin-top:20px;
 
 }
 }
