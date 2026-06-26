@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Nueva Solicitud - REPROGREEN</title>
 
 <style>
@@ -11,362 +14,667 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
+/*==========================
+BODY
+==========================*/
 
-    background-color:#eef5fc;
-    background-image:url("img/fondo.png");
-    background-repeat:no-repeat;
-    background-position:center top;
+body{
+
+    background:#eef3f8 url("img/fondo.png") no-repeat top center;
+
     background-size:cover;
+
     background-attachment:fixed;
 
     min-height:100vh;
-}
 
-header{
-    background:#0066d6;
-    color:white;
-    padding:20px 50px;
     display:flex;
-    justify-content:center;
-    align-items:center;
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
-}
 
-.logo{
-    display:flex;
     flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    width:100%;
-}
 
-.logo h1{
-    font-size:50px;
-    font-weight:800;
-    margin:0;
-}
+    color:#333;
 
-.logo p{
-    margin-top:8px;
-    opacity:.9;
 }
 
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f5f5f5;
+
+    padding-top:20px;
+    margin:0%;
+    padding:0%;
+
+}
+
+/*==========================
+CONTENEDOR
+==========================*/
+
+.container{
+
+    max-width:760px;
+
+   margin:70px auto 0;
+
+    padding:0 20px 30px;
+
 }
 
 .container{
-    width:100%;
-    max-width:600px;
-    margin:40px auto;
+
+    flex:1;
+
 }
 
-.tarjeta{
-    width:550px;
-    background:white;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.10);
-}
-
-.info{
-    background:#eaf4ff;
-    color:#0066d6;
-    border-left:5px solid #0066d6;
-    padding:15px;
-    margin:20px 0;
-    border-radius:8px;
-    font-size:15px;
-}
-
-label{
-    display:block;
-    margin-top:15px;
-    font-weight:bold;
-}
-
-input{
-    width:100%;
-    padding:15px;
-    margin-top:8px;
-    margin-bottom:18px;
-    font-size:17px;
-    border:1px solid #ccc;
-    border-radius:8px;
-}
-
-button{
-    width:100%;
-    font-size:18px;
-    font-weight:bold;
-    padding:16px;
-    border-radius:10px;
-    transition:0.3s;
-    margin-top:20px;
-    background:#37a9e1;
-    color:white;
-    border:none;
-    padding:12px 25px;
-    border-radius:5px;
-    cursor:pointer;
-    width:100%;
-}
-
-button:hover{
-    background:#0057b8;
-    transform:translateY(-2px);
-}
+/*==========================
+PROGRESO
+==========================*/
 
 .progreso{
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
-    margin:35px auto;
+
+    margin:45px auto 35px;
+
 }
 
 .paso{
+
     display:flex;
+
     flex-direction:column;
+
     align-items:center;
-    color:#999;
+
     font-weight:bold;
+
+    color:#999;
+
 }
 
 .circulo{
-    width:45px;
-    height:45px;
+
+    width:48px;
+
+    height:48px;
+
     border-radius:50%;
+
     background:#d9d9d9;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     color:white;
+
     font-size:20px;
+
     margin-bottom:8px;
+
+    transition:.25s;
+
 }
 
 .linea{
-    width:120px;
-    height:4px;
-    background:#d9d9d9;
-    margin:0 15px;
-    margin-bottom:28px;
-}
 
-.activo .circulo{
-    background:#37a9e1;
+    width:110px;
+
+    height:4px;
+
+    background:#d9d9d9;
+
+    margin:0 15px 28px;
+
 }
 
 .activo{
-    color:#37a9e1;
+
+    color:#1E7D32;
+
 }
+
+.activo .circulo{
+
+    background:#1E7D32;
+
+}
+
+/*==========================
+TARJETA
+==========================*/
+
+.tarjeta{
+
+    width:100%;
+
+    background:white;
+
+    border-radius:24px;
+
+    border-top:6px solid #1E7D32;
+
+    padding:28px 30px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.10);
+
+}
+
+.tarjeta h2{
+
+    color:#1E7D32;
+
+    font-size:30px;
+
+    margin-bottom:60px;
+
+}
+
+/*==========================
+ESTADO
+==========================*/
+
+.info{
+
+    background:#edf8f0;
+
+    border-left:6px solid #1E7D32;
+
+    color:#176728;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    margin-bottom:28px;
+
+    line-height:1.6;
+
+}
+
+/*==========================
+FORMULARIO
+==========================*/
+
+label{
+
+    display:block;
+
+    font-weight:bold;
+
+    margin:12px 0 5px;
+
+    color:#444;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:12px 15px;
+
+    border:1px solid #d8d8d8;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    transition:.25s;
+
+    background:white;
+
+}
+
+input:focus{
+
+    outline:none;
+
+    border-color:#1E7D32;
+
+    box-shadow:0 0 0 4px rgba(30,125,50,.15);
+
+}
+
+/*==========================
+BOTONES
+==========================*/
+
+button{
+
+    width:100%;
+
+    background:#1E7D32;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:14px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    margin-top:18px;
+
+    box-shadow:0 8px 18px rgba(30,125,50,.20);
+
+}
+
+button:hover{
+
+    background:#176728;
+
+    transform:translateY(-2px);
+
+}
+
+/*==========================
+PAGO
+==========================*/
 
 .datoPago{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:#eef7fd;
-    border:1px solid #37a9e1;
-    border-radius:8px;
-    padding:12px 15px;
-    margin-bottom:18px;
-}
 
-.datoPago strong{
-    color:#444;
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#edf8f0;
+
+    border:1px solid #b9dfc0;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    margin-bottom:15px;
+
 }
 
 .datoPago span{
-    color:#0066d6;
+
+    color:#1E7D32;
+
     font-weight:bold;
+
 }
 
 .datoPago button{
+
     width:auto;
+
     margin:0;
-    padding:8px 15px;
-    font-size:14px;
+
+    padding:10px 18px;
+
 }
 
+/*==========================
+FOOTER
+==========================*/
+
 footer{
+
+    background:#1E6F3D;
+
+    color:#fff;
+
     text-align:center;
-    padding:25px;
-    color:#666;
-    font-size:14px;
+
+    padding:14px 20px;
+
     margin-top:40px;
+
 }
+
+.footer-content{
+
+    max-width:500px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+}
+
+footer h2{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+
+    letter-spacing:.5px;
+
+}
+
+footer p{
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+    opacity:.95;
+
+}
+
+.footer-line{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin:12px auto;
+
+    width:140px;
+
+}
+
+.footer-line::before,
+.footer-line::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    background:rgba(255,255,255,.35);
+
+}
+
+.footer-line span{
+
+    font-size:16px;
+
+    line-height:1;
+
+}
+
+footer small{
+
+    font-size:13px;
+
+    opacity:.90;
+
+}
+
+/*==========================
+RESPONSIVE
+==========================*/
 
 @media(max-width:768px){
 
+body{
+
+    background:#eef3f8 url("img/fondo-mobile.png") no-repeat top center;
+
+    background-size:cover;
+
+    background-attachment:scroll;
+
+}
+
 .container{
-    width:95%;
+
+    padding:15px;
+
 }
 
-header{
-    padding:20px;
+.logo{
+
+    max-width:340px;
+
 }
 
-.logo h1{
-    font-size:50px;
-    font-weight:800;
-    margin:0;
+.tarjeta{
+
+    padding:25px;
+
+    border-radius:18px;
+
 }
 
-.logo p{
-    font-size:20px;
-    margin-top:8px;
-    font-weight:400;
+.tarjeta h2{
+
+    font-size:24px;
+
+}
+
+.progreso{
+
+    transform:scale(.90);
+
 }
 
 .linea{
-    width:50px;
+
+    width:45px;
+
 }
+
+button{
+
+    font-size:16px;
+
+}
+
 }
 
 </style>
-
-<link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<header>
-
-    <div class="logo">
-        <h1>🌿REPROGREEN</h1>
-    </div>
-
-</header>
-
-<div class="progreso">
-
-    <div class="paso activo">
-        <div class="circulo">1</div>
-        <span>Solicitud</span>
-    </div>
-
-    <div class="linea"></div>
-
-    <div class="paso">
-        <div class="circulo">2</div>
-        <span>Pago</span>
-    </div>
-
-    <div class="linea"></div>
-
-    <div class="paso">
-        <div class="circulo">3</div>
-        <span>Confirmación</span>
-    </div>
-
-</div>
-
 <div class="container">
+
+    <div class="progreso">
+
+        <div class="paso activo">
+
+            <div class="circulo">1</div>
+
+            <span>Solicitud</span>
+
+        </div>
+
+        <div class="linea"></div>
+
+        <div class="paso">
+
+            <div class="circulo">2</div>
+
+            <span>Pago</span>
+
+        </div>
+
+        <div class="linea"></div>
+
+        <div class="paso">
+
+            <div class="circulo">3</div>
+
+            <span>Confirmación</span>
+
+        </div>
+
+    </div>
+
+    <!-- FORMULARIO -->
 
     <div class="tarjeta">
 
         <h2>Nueva Solicitud</h2>
-        
-    <div class="info">
-    <strong>Estado:</strong> Complete sus datos para iniciar el trámite.
-</div>
 
-<label>Nombre y Apellido</label>
-<input type="text" id="nombre" name="nombre"
-placeholder="Ej: Juan Pérez"
-pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,60}"
-title="Ingrese solo letras y espacios."
-required>
+        <div class="info">
 
-<label>DNI</label>
-<input
-type="text"
-id="dni"
-name="dni"
-inputmode="numeric"
-placeholder="Ej: 30123456"
-pattern="[0-9]{7,8}"
-title="Ingrese un DNI válido."
-required>
+            <strong>Estado:</strong><br>
+            Complete sus datos para iniciar el trámite.
 
-<label>Teléfono</label>
-<input
-type="tel"
-id="telefono"
-name="telefono"
-inputmode="numeric"
-placeholder="Ej: 1112345678"
-pattern="[0-9]{10,15}"
-title="Ingrese un teléfono válido."
-required>
+        </div>
 
-<label>Email</label>
-<input
-    type="email"
-    id="email"
-    name="email"
-    placeholder="Ej: nombre@gmail.com"
-    required
-    autocomplete="email"
-    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-    title="Ingresá un correo electrónico válido.">
+        <label>Nombre y Apellido</label>
 
-<button onclick="enviarSolicitud()">
-            Enviar Solicitud
+        <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Ej: Juan Pérez"
+            pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,60}"
+            required>
+
+        <label>DNI</label>
+
+        <input
+            type="text"
+            id="dni"
+            name="dni"
+            inputmode="numeric"
+            placeholder="Ej: 30123456"
+            pattern="[0-9]{7,8}"
+            required>
+
+        <label>Teléfono</label>
+
+        <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            inputmode="numeric"
+            placeholder="Ej: 1112345678"
+            pattern="[0-9]{8,15}"
+            required>
+
+        <label>Email</label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Ej: nombre@gmail.com"
+            autocomplete="email"
+            required>
+
+        <button onclick="enviarSolicitud()">
+
+            Continuar
+
         </button>
 
     </div>
 
-    <div class="tarjeta" id="pago" style="display:none;">
+    <!-- PAGO -->
+
+    <div class="tarjeta"
+
+         id="pago"
+
+         style="display:none;margin-top:30px;">
 
         <h2>Pago del trámite</h2>
 
-<div class="datoPago">
-    <strong>Importe:</strong>
-    <span>$30.000</span>
-</div>
+        <div class="datoPago">
 
-<label>CBU</label>
+            <strong>Importe:</strong>
 
-<div class="datoPago">
-    <span id="cbu">0000003100000000000000</span>
-    <button type="button" onclick="copiarTexto('cbu')">
-        Copiar
-    </button>
-</div>
+            <span>$30.000</span>
 
-<label>Alias</label>
+        </div>
 
-<div class="datoPago">
-    <span id="alias">REPROGREEN.PAGOS</span>
-    <button type="button" onclick="copiarTexto('alias')">
-        Copiar
-    </button>
-</div>
+        <label>CBU</label>
 
-<label>Adjuntar comprobante</label>
-<input type="file" id="comprobante" required>
+        <div class="datoPago">
 
-<button onclick="confirmarPago()">
-    Confirmar Pago
-</button>
+            <span id="cbu">
+
+                0000003100000000000000
+
+            </span>
+
+            <button
+                type="button"
+                onclick="copiarTexto('cbu')">
+
+                Copiar
+
+            </button>
+
+        </div>
+
+        <label>Alias</label>
+
+        <div class="datoPago">
+
+            <span id="alias">
+
+                REPROGREEN.PAGOS
+
+            </span>
+
+            <button
+                type="button"
+                onclick="copiarTexto('alias')">
+
+                Copiar
+
+            </button>
+
+        </div>
+
+        <label>
+
+            Adjuntar comprobante
+
+        </label>
+
+        <input
+            type="file"
+            id="comprobante"
+            required>
+
+        <button onclick="confirmarPago()">
+
+            Confirmar Pago
+
+        </button>
 
     </div>
 
 </div>
 
-</div>
 <script>
+
+function copiarTexto(id){
+
+    const texto = document.getElementById(id).innerText;
+
+    navigator.clipboard.writeText(texto);
+
+    alert("Copiado correctamente.");
+
+}
 
 function enviarSolicitud(){
 
@@ -380,63 +688,76 @@ function enviarSolicitud(){
         return;
     }
 
-    // Validar nombre y apellido
-if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ]+(?:\s+[A-Za-zÁÉÍÓÚáéíóúÑñ]+)+$/.test(nombre)) {
-    alert("⚠️ Ingresá nombre y apellido.");
-    document.getElementById("nombre").focus();
-    return;
-}
+    if(!/^[A-Za-zÁÉÍÓÚáéíóúÑñ]+(?:\s+[A-Za-zÁÉÍÓÚáéíóúÑñ]+)+$/.test(nombre)){
+        alert("⚠️ Ingresá nombre y apellido.");
+        return;
+    }
 
-// Validar DNI (7 u 8 números)
-if (!/^\d{7,8}$/.test(dni)) {
-    alert("⚠️ El DNI debe contener 7 u 8 números.");
-    document.getElementById("dni").focus();
-    return;
-}
+    if(!/^\d{7,8}$/.test(dni)){
+        alert("⚠️ El DNI debe contener 7 u 8 números.");
+        return;
+    }
 
-// Validar teléfono (8 a 15 números)
-if (!/^\d{8,15}$/.test(telefono)) {
-    alert("⚠️ Ingresá un teléfono válido.");
-    document.getElementById("telefono").focus();
-    return;
-}
+    if(!/^\d{8,15}$/.test(telefono)){
+        alert("⚠️ Ingresá un teléfono válido.");
+        return;
+    }
 
-// Validar email
-if (!document.getElementById("email").checkValidity()) {
-    alert("⚠️ Ingresá un correo electrónico válido.");
-    document.getElementById("email").focus();
-    return;
-}
+    if(!document.getElementById("email").checkValidity()){
+        alert("⚠️ Ingresá un correo electrónico válido.");
+        return;
+    }
 
-let numero = "REPRO-" + Math.floor(Math.random() * 100000);
+    let numero = "REPRO-" + Math.floor(Math.random()*100000);
 
-localStorage.setItem("tramite", numero);
-document.querySelectorAll(".tarjeta")[0].style.display = "none";
-document.getElementById("pago").style.display = "block";
-document.querySelectorAll(".paso")[1].classList.add("activo");
+    localStorage.setItem("tramite",numero);
 
-// window.location = "confirmacion.html";
+    document.querySelector(".tarjeta").style.display="none";
+
+    document.getElementById("pago").style.display="block";
+
+    document.querySelectorAll(".paso")[1].classList.add("activo");
+
 }
 
 function confirmarPago(){
-let comprobante = document.getElementById("comprobante");
 
-if (comprobante.files.length === 0) {
-    alert("⚠️ Debe adjuntar el comprobante de pago.");
-    comprobante.focus();
-    return;
-}
+    let comprobante=document.getElementById("comprobante");
+
+    if(comprobante.files.length===0){
+
+        alert("⚠️ Debe adjuntar el comprobante de pago.");
+
+        return;
+
+    }
+
     document.querySelectorAll(".paso")[2].classList.add("activo");
 
-    window.location = "confirmacion.html";
+    window.location="confirmacion.html";
 
 }
 
 </script>
 
 <footer>
-    © 2026 REPROGREEN - Portal de Gestión REPROCANN
+
+    <div class="footer-content">
+
+        <p>Portal de Gestión REPROCANN</p>
+
+        <div class="footer-line">
+            <span>🌿</span>
+        </div>
+
+        <small>
+            © 2026 REPROGREEN - Todos los derechos reservados.
+        </small>
+
+    </div>
+
 </footer>
 
 </body>
+
 </html>

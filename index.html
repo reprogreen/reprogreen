@@ -303,6 +303,93 @@ footer small{
 
 }
 
+footer{
+
+    background:#1E6F3D;
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:10px 10px 14px;
+
+    margin-top:50px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+footer h2{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+
+    letter-spacing:.5px;
+
+}
+
+footer p{
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+    opacity:.95;
+
+}
+
+.footer-line{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin:12px auto;
+
+    width:180px;
+
+}
+
+.footer-line::before,
+.footer-line::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    background:rgba(255,255,255,.35);
+
+}
+
+.footer-line span{
+
+    font-size:16px;
+
+    line-height:1;
+
+}
+
+footer small{
+
+    font-size:13px;
+
+    opacity:.90;
+
+}
+
 /*==================================
 RESPONSIVE
 ==================================*/
@@ -413,9 +500,6 @@ body{
     border-radius:50%;
     background:#1E7D32;
     color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
     font-size:26px;
     font-weight:bold;
 }
@@ -450,6 +534,18 @@ footer p{
 
 footer small{
     font-size:14px;
+}
+
+.footer-content{
+
+    max-width:600px;
+
+    width:fit-content;
+
+    margin:0 auto;
+
+    text-align:center;
+
 }
 
 }
@@ -688,13 +784,19 @@ footer{
 
 <footer>
 
-<p style="font-size:22px;margin-top:10px;">
-Portal de Gestión REPROCANN
-</p>
+    <div class="footer-content">
 
-<small style="font-size:17px;">
-© 2026 Todos los derechos reservados.
-</small>
+        <p>Portal de Gestión REPROCANN</p>
+
+        <div class="footer-line">
+            <span>🌿</span>
+        </div>
+
+        <small>
+            © 2026 REPROGREEN - Todos los derechos reservados.
+        </small>
+
+    </div>
 
 </footer>
 
