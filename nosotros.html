@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<title>Nosotros | REPROGREEN</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+
+    background:#eef3f8 url("img/fondo.png") no-repeat top center;
+    background-size:cover;
+    background-attachment:fixed;
+
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.contenedor{
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    max-width:700px;
+
+    margin:0 auto;
+
+    padding:30px;
+}
+
+footer{
+    background:#1E6F3D;
+    color:white;
+
+    text-align:center;
+
+    padding:18px 10px;
+
+    margin-top:auto;
+}
+
+.footer-line{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin:8px 0;
+}
+
+.footer-line span{
+    width:70px;
+    height:1px;
+    background:rgba(255,255,255,.35);
+}
+
+
+main{
+
+max-width:820px;
+
+margin:0 auto;
+
+padding: 200px 25px 40px;
+
+}
+
+.subtitulo{
+
+font-size:14px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#666;
+
+}
+
+.titulo{
+
+font-size:48px;
+
+font-weight:700;
+
+color:#666;
+
+margin-top:8px;
+
+}
+
+.linea{
+
+width:70px;
+
+height:4px;
+
+background:#1f7d4d;
+
+border-radius:30px;
+
+margin:18px 0 35px;
+
+}
+
+.intro{
+
+font-size:17px;
+
+line-height:1.9;
+
+color:#666;
+
+margin-bottom:22px;
+
+}
+
+.timeline{
+
+position:relative;
+
+margin-top:50px;
+
+padding-left:70px;
+
+}
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+left:24px;
+
+top:5px;
+
+bottom:10px;
+
+width:2px;
+
+background:#d6e9dc;
+
+}
+
+.timeline-item{
+
+position:relative;
+
+display:flex;
+
+gap:28px;
+
+margin-bottom:55px;
+
+}
+
+.timeline-icon{
+
+position:absolute;
+
+left:-70px;
+
+width:48px;
+
+height:48px;
+
+border-radius:50%;
+
+background:#fff;
+
+border:3px solid #2b8a57;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:#2b8a57;
+
+font-size:20px;
+
+z-index:5;
+
+}
+
+.timeline-content h3{
+
+font-size:24px;
+
+color:#1f7d4d;
+
+margin-bottom:10px;
+
+font-weight:600;
+
+}
+
+.timeline-content p{
+
+font-size:16px;
+
+line-height:1.8;
+
+color:#666;
+
+}
+
+.trabajamos{
+
+margin-top:40px;
+
+background:#eef8f2;
+
+border-radius:14px;
+
+padding:18px 20px;
+
+display:flex;
+
+gap:22px;
+
+align-items:flex-start;
+
+border-left:6px solid #2b8a57;
+
+}
+
+.trabajamos-icono{
+
+width:62px;
+
+height:62px;
+
+border-radius:50%;
+
+background:#2b8a57;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:#fff;
+
+font-size:28px;
+
+flex-shrink:0;
+
+}
+
+.trabajamos h3{
+
+font-size:28px;
+
+color:#1f7d4d;
+
+margin-bottom:12px;
+
+}
+
+.trabajamos p{
+
+font-size:16px;
+
+line-height:1.8;
+
+color:#666;
+
+last-child{margin-bottom: 0;}
+
+}
+
+/*==========================
+MENU LATERAL
+==========================*/
+
+.menu-btn{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    width:52px;
+    height:52px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:white;
+
+    border-radius:14px;
+
+    color:#1E7D32;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+    z-index:9999;
+
+    transition:.25s;
+
+}
+
+.menu-btn:hover{
+
+    transform:scale(1.05);
+
+}
+
+.menu-btn.oculto{
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:998;
+
+}
+
+.overlay.activo{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.menu-lateral{
+
+    position:fixed;
+
+    top:0;
+
+    right:-320px;
+
+    width:300px;
+
+    height:100vh;
+
+    background:white;
+
+    box-shadow:-5px 0 25px rgba(0,0,0,.18);
+
+    transition:.35s;
+
+    z-index:999;
+
+    padding-top:20px;
+
+}
+
+.menu-lateral.abierto{
+
+    right:0;
+
+}
+
+.menu-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.menu-header h2{
+
+    color:#1E7D32;
+
+}
+
+.menu-header span{
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}
+
+.menu-lateral a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:18px 24px;
+
+    color:#333;
+
+    text-decoration:none;
+
+    border-bottom:1px solid #f2f2f2;
+
+    transition:.25s;
+
+}
+
+.menu-lateral a:hover{
+
+    background:#edf8f0;
+
+    color:#1E7D32;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="overlay" class="overlay" onclick="cerrarMenu()"></div>
+
+<nav id="menuLateral" class="menu-lateral">
+
+    <div class="menu-header">
+
+        <h2>REPROGREEN</h2>
+
+        <span onclick="cerrarMenu()">
+            <i class="fas fa-times"></i>
+        </span>
+
+    </div>
+
+    <a href="index.html">
+        <i class="fas fa-house"></i>
+        Inicio
+    </a>
+
+    <a href="reprocann.html">
+        <i class="fas fa-cannabis"></i>
+        ¿Qué es REPROCANN?
+    </a>
+
+    <a href="requisitos.html">
+        <i class="fas fa-list-check"></i>
+        Requisitos
+    </a>
+
+    <a href="preguntas.html">
+        <i class="fas fa-circle-question"></i>
+        Preguntas Frecuentes
+    </a>
+
+    <a href="contacto.html">
+        <i class="fas fa-headset"></i>
+        Contacto / Soporte
+    </a>
+
+    <a href="terminos.html">
+        <i class="fas fa-file-contract"></i>
+        Términos y Condiciones
+    </a>
+
+    <a href="privacidad.html">
+        <i class="fas fa-shield-halved"></i>
+        Política de Privacidad
+    </a>
+
+</nav>
+
+<main>
+
+<div class="menu-btn" onclick="abrirMenu()">
+    <i class="fas fa-bars"></i>
+</div>
+
+<span class="subtitulo">
+
+REPROGREEN
+
+</span>
+
+<h2 class="titulo">
+
+Nosotros
+
+</h2>
+
+<div class="linea"></div>
+
+<p class="intro">
+
+REPROGREEN es un portal digital diseñado para acompañar a los usuarios en la gestión administrativa de trámites relacionados con REPROCANN.
+
+</p>
+
+<p class="intro">
+
+Nuestro objetivo es brindar una experiencia clara, organizada y accesible, facilitando cada etapa del proceso con transparencia y compromiso.
+
+</p>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+    <div class="timeline-icon">
+
+        <i class="fa-solid fa-rocket"></i>
+
+    </div>
+
+    <div class="timeline-content">
+
+        <h3>Nuestra misión</h3>
+
+        <p>
+
+            Facilitar el acceso a la gestión administrativa de REPROCANN mediante una plataforma
+            simple, intuitiva y segura, ofreciendo acompañamiento durante todo el proceso.
+
+        </p>
+
+    </div>
+
+</div>
+
+<div class="timeline-item">
+
+    <div class="timeline-icon">
+
+        <i class="fa-solid fa-eye"></i>
+
+    </div>
+
+    <div class="timeline-content">
+
+        <h3>Nuestra visión</h3>
+
+        <p>
+
+            Ser un referente nacional en soluciones digitales para usuarios de REPROCANN,
+            brindando una experiencia moderna, transparente y accesible.
+
+        </p>
+
+    </div>
+
+</div>
+
+<div class="timeline-item">
+
+    <div class="timeline-icon">
+
+        <i class="fa-solid fa-heart"></i>
+
+    </div>
+
+    <div class="timeline-content">
+
+        <h3>Nuestros valores</h3>
+
+        <p>
+
+            Creemos en la transparencia, el compromiso, la cercanía, la innovación
+            y el respeto por cada usuario que confía en nuestro trabajo.
+
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+<div class="trabajamos">
+
+    <div class="trabajamos-icono">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+    </div>
+
+    <div>
+
+        <h3>Trabajamos para vos</h3>
+
+        <p>
+
+            Trabajamos para que cada usuario pueda realizar el seguimiento de su solicitud
+            de manera simple, segura y desde cualquier dispositivo.
+
+        </p>
+
+        <p>
+
+            Nuestro compromiso es brindar una experiencia clara, organizada y confiable,
+            acompañando cada gestión con información actualizada y atención personalizada.
+
+        </p>
+
+    </div>
+
+</div>
+
+</main>
+
+<footer>
+
+    <div class="footer-content">
+
+        <p>Portal de Gestión REPROCANN</p>
+
+        <div class="footer-line">
+    <span></span>
+    🌿
+    <span></span>
+</div>
+
+        <small>
+            © 2026 REPROGREEN - Todos los derechos reservados.
+        </small>
+
+    </div>
+
+</footer>
+
+<style>
+
+footer{
+
+margin-top:0px;
+
+background:#1E6F3D;
+
+padding:18px 10px;
+
+text-align:center;
+
+color:white;
+
+}
+
+.footer{
+
+max-width:1200px;
+
+margin:auto;
+
+text-align:center;
+
+}
+
+.footer p{
+
+color:#fff;
+
+font-size:15px;
+
+letter-spacing:.5px;
+
+}
+
+</style>
+
+<script>
+
+function abrirMenu(){
+
+    document.getElementById("menuLateral").classList.add("abierto");
+    document.getElementById("overlay").classList.add("activo");
+    document.querySelector(".menu-btn").classList.add("oculto");
+
+}
+
+function cerrarMenu(){
+
+    document.getElementById("menuLateral").classList.remove("abierto");
+    document.getElementById("overlay").classList.remove("activo");
+    document.querySelector(".menu-btn").classList.remove("oculto");
+
+}
+
+</script>
+
+</body>
+
+</html>
