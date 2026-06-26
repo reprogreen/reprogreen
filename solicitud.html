@@ -322,8 +322,6 @@ PAGO
 
     padding:10px 18px;
 
-    flex-shrink:0;
-
 }
 
 /*==========================
@@ -359,13 +357,13 @@ footer{
 RESPONSIVE
 ==========================*/
 
-@media(max-width:768px){
+@media (max-width:768px){
 
 body{
 
-    background:#eef3f8 url("img/fondo-mobile.png") no-repeat top center;
+    background:#eef3f8 url("img/fondomobile.png") no-repeat top center;
 
-    background-size:cover;
+    background-size:100% auto;
 
     background-attachment:scroll;
 
@@ -373,7 +371,8 @@ body{
 
 .container{
 
-    padding:15px;
+    padding:0 15px 20px;
+    margin-top:0;
 
 }
 
@@ -385,9 +384,9 @@ body{
 
 .tarjeta{
 
-    padding:25px;
-
+    padding:22px;
     border-radius:18px;
+    margin-top:0;
 
 }
 
@@ -400,6 +399,7 @@ body{
 .progreso{
 
     transform:scale(.90);
+    margin:10px auto 8px;
 
 }
 
