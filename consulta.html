@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Consultar Estado - REPROGREEN</title>
+
+<link rel="stylesheet" href="css/style.css">
 
 <style>
 
@@ -12,197 +16,303 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-    background:#eef3f8;
+
+    background:#eef3f8 url("img/fondo.png") no-repeat top center;
+    background-size:cover;
+    background-attachment:fixed;
+
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    color:#333;
+
 }
 
-/* HEADER */
+/*==========================
+CONTENEDOR
+==========================*/
 
-header{
-    background:#0066d6;
-    color:white;
-    padding:20px 50px;
+.container{
+
+    flex:1;
+
     display:flex;
     justify-content:center;
     align-items:center;
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
-}
 
-.logo{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-}
-
-.logo h1{
-    font-size:50px;
-    font-weight:800;
-}
-
-.logo p{
-    margin-top:8px;
-    font-size:20px;
-}
-
-/* CONTENIDO */
-
-.container{
+    width:100%;
     max-width:700px;
-    margin:50px auto;
+
+    margin:0 auto;
+
     padding:30px;
+
 }
+
+/*==========================
+TARJETA
+==========================*/
 
 .tarjeta{
-    background:white;
+
+    width:100%;
+
+    background:#fff;
+
     border-radius:20px;
-    padding:40px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    border-top:6px solid #1E7D32;
+
+    padding:28px 30px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.10);
+
 }
 
 .tarjeta h2{
-    color:#0066d6;
-    font-size:34px;
-    margin-bottom:10px;
+
+    color:#1E7D32;
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
 }
 
 .tarjeta p{
+
     color:#666;
+
     margin-bottom:25px;
+
+    line-height:1.5;
+
 }
 
+/*==========================
+INFO
+==========================*/
+
+.info{
+
+    background:#edf8f0;
+
+    border-left:6px solid #1E7D32;
+
+    color:#176728;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    margin-bottom:28px;
+
+}
+
+/*==========================
+FORMULARIO
+==========================*/
+
 label{
+
     display:block;
+
     font-weight:bold;
-    margin-bottom:10px;
-    margin-top:20px;
+
+    margin:15px 0 8px;
+
 }
 
 input{
+
     width:100%;
-    padding:14px;
-    border:1px solid #ccc;
-    border-radius:10px;
+
+    padding:12px 15px;
+
+    border:1px solid #d8d8d8;
+
+    border-radius:12px;
+
     font-size:16px;
+
+}
+
+input:focus{
+
+    outline:none;
+
+    border-color:#1E7D32;
+
+    box-shadow:0 0 0 4px rgba(30,125,50,.15);
+
 }
 
 button{
+
     width:100%;
-    margin-top:30px;
-    padding:15px;
-    background:#37a9e1;
-    color:white;
+
+    margin-top:22px;
+
+    padding:14px;
+
+    background:#1E7D32;
+
+    color:#fff;
+
     border:none;
-    border-radius:10px;
+
+    border-radius:12px;
+
     font-size:17px;
+
     font-weight:bold;
+
     cursor:pointer;
-    transition:.3s;
+
+    transition:.25s;
+
 }
 
 button:hover{
-    background:#0066d6;
-    transform:translateY(-2px);
+
+    background:#176728;
+
 }
 
-.info{
-    margin-top:25px;
-    padding:18px;
-    background:#eef7fd;
-    border-left:5px solid #37a9e1;
-    border-radius:8px;
-    color:#555;
-}
+/*==========================
+FOOTER
+==========================*/
 
 footer{
-    margin-top:50px;
+
+    background:#1E6F3D;
+
+    color:white;
+
     text-align:center;
-    color:#777;
-    padding:20px;
+
+    padding:18px 10px;
+
+    margin-top:auto;
+
 }
 
-footer{
-    text-align:center;
-    padding:25px;
-    color:#666;
-    font-size:14px;
-    margin-top:40px;
+.footer-line{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin:8px 0;
+
 }
 
-/* CELULAR */
+.footer-line span{
+
+    width:70px;
+
+    height:1px;
+
+    background:rgba(255,255,255,.35);
+
+}
+
+/*==========================
+RESPONSIVE
+==========================*/
 
 @media(max-width:768px){
 
-header{
-    padding:20px;
-}
+body{
 
-.logo h1{
-    font-size:38px;
-}
+    background:#eef3f8 url("img/fondomobile.png") no-repeat top center;
 
-.logo p{
-    font-size:16px;
+    background-size:100% auto;
+
+    background-attachment:scroll;
+
 }
 
 .container{
-    padding:15px;
-    margin:30px auto;
+
+    margin-top:10px;
+
+    padding:0 15px 20px;
+
 }
 
 .tarjeta{
-    padding:25px;
+
+    padding:22px;
+
 }
 
 .tarjeta h2{
-    font-size:28px;
+
+    font-size:24px;
+
+}
+
+button{
+
+    font-size:16px;
+
 }
 
 }
 
 </style>
 
-<link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
 
-<header>
-
-<div class="logo">
-<h1>🌿 REPROGREEN</h1>
-</div>
-
-</header>
-
 <div class="container">
 
-<div class="tarjeta">
+    <div class="tarjeta">
 
-<h2>Consultar Estado</h2>
+        <h2>Consultar Estado</h2>
 
-<p>Ingrese el número de trámite para conocer el estado de su solicitud.</p>
+        <p>
+            Ingrese el número de trámite para conocer el estado actual de su solicitud.
+        </p>
 
-<div class="info">
-<strong>Estado:</strong> Consulte el estado actual de su trámite.
-</div>
+        <div class="info">
 
-<label>Número de trámite</label>
+            <strong>Estado:</strong><br>
 
-<input
-type="text"
-id="tramite"
-placeholder="Ej: REPRO-12345">
+            Consulte el estado actual de su trámite.
 
-<button onclick="consultar()">
-Consultar Estado
-</button>
+        </div>
 
-</div>
+        <label for="tramite">
+
+            Número de trámite
+
+        </label>
+
+        <input
+            type="text"
+            id="tramite"
+            placeholder="Ej: REPRO-12345">
+
+        <button onclick="consultar()">
+
+            Consultar Estado
+
+        </button>
+
+    </div>
 
 </div>
 
@@ -212,9 +322,12 @@ function consultar(){
 
     let tramite = document.getElementById("tramite").value.trim();
 
-    if(tramite === ""){
-        alert("⚠ Debe ingresar un número de trámite.");
+    if(tramite===""){
+
+        alert("⚠️ Debe ingresar un número de trámite.");
+
         return;
+
     }
 
     alert(
@@ -227,8 +340,25 @@ function consultar(){
 </script>
 
 <footer>
-    © 2026 REPROGREEN - Portal de Gestión REPROCANN
+
+    <div class="footer-content">
+
+          <p>Portal de Gestión REPROCANN</p>
+
+        <div class="footer-line">
+            <span></span>
+            🌿
+            <span></span>
+        </div>
+
+        <small>
+            © 2026 REPROGREEN - Todos los derechos reservados.
+        </small>
+
+    </div>
+
 </footer>
 
 </body>
+
 </html>
