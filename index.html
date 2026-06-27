@@ -25,36 +25,21 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 }
 
 body{
-    background:linear-gradient(180deg,#ffffff,#edf3f8);
-    color:#333;
+    margin:0;
+    background-color:#f9fcfd;
 }
 
-/*==========================
-BANNER
-==========================*/
+.inicio{
 
-.hero{
+    max-width:2100px;
 
-    max-width:1300px;
+    margin:0 auto;
 
-    margin:0 auto 15px;
+    background:url("img/pcbanner2.png") no-repeat top center;
 
-    padding:0;
+    background-size:100% auto;
 
-    overflow:hidden;
-
-    border-radius:0;
-
-}
-
-.hero picture,
-.hero img{
-
-    width:100%;
-
-    height:auto;
-
-    display:block;
+    padding-top:390px;
 
 }
 
@@ -66,7 +51,7 @@ CARDS
 
     max-width:1300px;
 
-    margin:15px auto 20px;
+    margin:200px auto 20px;
 
     padding:0 20px;
 
@@ -393,7 +378,31 @@ footer small{
 RESPONSIVE
 ==================================*/
 
+@media (max-width:1600px){
+
+    .inicio{
+        padding-top:340px;
+    }
+
+}
+
+@media (max-width:1400px){
+
+    .inicio{
+        padding-top:300px;
+    }
+
+}
+
 @media (max-width:1200px){
+
+    .inicio{
+        padding-top:260px;
+    }
+
+}
+
+@media (max-width:1000px){
 
 .cards{
 
@@ -415,24 +424,6 @@ RESPONSIVE
 
 body{
     background:#eef3f8;
-}
-
-/* Banner */
-
-.hero{
-    margin:0;
-    padding:0;
-}
-
-.hero picture{
-    display:block;
-    width:100%;
-}
-
-.hero img{
-    width:100%;
-    height:auto;
-    display:block;
 }
 
 /* Tarjetas */
@@ -552,13 +543,24 @@ CELULARES CHICOS
 
 @media (max-width:600px){
 
-.hero picture,
-.hero img{
-    height:auto;
+body{
+    background:#eef3f8;
+}
+
+.inicio{
 
     width:100%;
 
-    display:block;
+    max-width:none;
+
+    background:url("img/bannermob.png") no-repeat top center;
+
+    background-size:100% auto;
+
+    background-position:top center;
+
+    padding-top:185px;
+
 }
 
 .cards{ grid-template-columns:1fr; gap:16px; } .card{ padding:22px; } .card img{ width:58px; height:58px; } .card h3{ font-size:20px; } .card p{ font-size:16px; } .card button{ font-size:17px; padding:14px; }
@@ -650,7 +652,7 @@ footer{
 
     gap:14px;
 
-    margin:10px auto;
+    margin:0 auto;
 
 }
 
@@ -884,24 +886,11 @@ MENU LATERAL
 
 </nav>
 
-<section class="hero">
-
-    <picture>
-        <!-- Banner para celular -->
-        <source media="(max-width:768px)"
-                srcset="img/bannermobile.png">
-
-        <!-- Banner para PC -->
-        <img src="img/banner.png"
-             alt="Portal REPROGREEN">
-
-    </picture>
-
-</section>
-
 <div class="menu-btn" onclick="abrirMenu()">
     <i class="fas fa-bars"></i>
 </div>
+
+<div class="inicio">
 
 <section class="cards">
 
@@ -977,6 +966,7 @@ MENU LATERAL
 
     </div>
 
+
 </section>
 
 <section class="info">
@@ -1006,6 +996,8 @@ MENU LATERAL
     </div>
 
 </section>
+
+</div>
 
 <footer>
 
