@@ -8,8 +8,6 @@
 
 <title>Renovación - REPROGREEN</title>
 
-<link rel="stylesheet" href="css/style.css">
-
 <style>
 
 *{
@@ -54,13 +52,15 @@ CONTENEDOR
 ==========================*/
 
 .container{
-
     width:100%;
     max-width:620px;
-
-    margin:0 auto 40px;
-
+    margin:70px auto 0;
     padding:0;
+}
+
+.container{
+
+    flex:1;
 
 }
 
@@ -71,14 +71,12 @@ PROGRESO
 .progreso{
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
-    width:100%;
-
-    margin:35px auto 30px;
-
-    flex-wrap: nowrap;
+    margin:45px auto 35px;
 
 }
 
@@ -89,10 +87,6 @@ PROGRESO
     flex-direction:column;
 
     align-items:center;
-
-    flex:1;
-
-    min-width:0;
 
     font-weight:bold;
 
@@ -155,23 +149,17 @@ TARJETA
 ==========================*/
 
 .tarjeta{
-
     width:100%;
-
     max-width:620px;
-
     margin:0 auto;
 
     background:#fff;
-
     border-radius:20px;
-
     border-top:6px solid #1E7D32;
 
     padding:28px 30px;
 
     box-shadow:0 15px 35px rgba(0,0,0,.10);
-
 }
 
 .tarjeta h2{
@@ -180,12 +168,12 @@ TARJETA
 
     font-size:30px;
 
-    margin:10px 0 25px;
+    margin-bottom:30px;
 
 }
 
 /*==========================
-INFO
+ESTADO
 ==========================*/
 
 .info{
@@ -341,9 +329,7 @@ FOOTER
 ==========================*/
 
 footer{
-
     background:#1E6F3D;
-
     color:white;
 
     text-align:center;
@@ -351,38 +337,27 @@ footer{
     padding:18px 10px;
 
     margin-top:auto;
-
 }
 
 .footer-line{
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     gap:12px;
-
     margin:8px 0;
-
 }
 
 .footer-line span{
-
     width:70px;
-
     height:1px;
-
     background:rgba(255,255,255,.35);
-
 }
 
 /*==========================
 RESPONSIVE
 ==========================*/
 
-@media(max-width:768px){
+@media (max-width:768px){
 
 body{
 
@@ -396,17 +371,22 @@ body{
 
 .container{
 
-    margin-top:0px;
-
     padding:0 15px 20px;
+    margin-top:0;
+
+}
+
+.logo{
+
+    max-width:340px;
 
 }
 
 .tarjeta{
 
     padding:22px;
-
     border-radius:18px;
+    margin-top:0;
 
 }
 
@@ -419,7 +399,6 @@ body{
 .progreso{
 
     transform:scale(.90);
-
     margin:10px auto 8px;
 
 }
@@ -444,30 +423,41 @@ button{
 
 <body>
 
-<div class="progreso">
-
-    <div class="paso activo">
-        <div class="circulo">1</div>
-        <span>Renovación</span>
-    </div>
-
-    <div class="linea"></div>
-
-    <div class="paso">
-        <div class="circulo">2</div>
-        <span>Pago</span>
-    </div>
-
-    <div class="linea"></div>
-
-    <div class="paso">
-        <div class="circulo">3</div>
-        <span>Confirmación</span>
-    </div>
-
-</div>
-
 <div class="container">
+
+    <div class="progreso">
+
+        <div class="paso activo">
+
+            <div class="circulo">1</div>
+
+            <span>Renovación</span>
+
+        </div>
+
+        <div class="linea"></div>
+
+        <div class="paso">
+
+            <div class="circulo">2</div>
+
+            <span>Pago</span>
+
+        </div>
+
+        <div class="linea"></div>
+
+        <div class="paso">
+
+            <div class="circulo">3</div>
+
+            <span>Confirmación</span>
+
+        </div>
+
+    </div>
+
+    <!-- FORMULARIO -->
 
     <div class="tarjeta">
 
@@ -476,7 +466,6 @@ button{
         <div class="info">
 
             <strong>Estado:</strong><br>
-
             Complete los datos para iniciar la renovación.
 
         </div>
@@ -497,23 +486,32 @@ button{
         <input
             type="text"
             id="dni"
+            name="dni"
             inputmode="numeric"
-            placeholder="Ej: 30123456">
+            placeholder="Ej: 30123456"
+            pattern="[0-9]{7,8}"
+            required>
 
         <label>Teléfono</label>
 
         <input
             type="tel"
             id="telefono"
+            name="telefono"
             inputmode="numeric"
-            placeholder="Ej: 1112345678">
+            placeholder="Ej: 1112345678"
+            pattern="[0-9]{8,15}"
+            required>
 
         <label>Email</label>
 
         <input
             type="email"
             id="email"
-            placeholder="Ej: nombre@gmail.com">
+            name="email"
+            placeholder="Ej: nombre@gmail.com"
+            autocomplete="email"
+            required>
 
         <label>Adjuntar documentación</label>
 
@@ -521,7 +519,8 @@ button{
             type="file"
             id="archivoRenovacion">
 
-        <button
+
+         <button
             type="button"
             onclick="enviarRenovacion()">
 
@@ -529,12 +528,16 @@ button{
 
         </button>
 
+
     </div>
 
-    <div
-        class="tarjeta"
-        id="pago"
-        style="display:none;margin-top:30px;">
+    <!-- PAGO -->
+
+    <div class="tarjeta"
+
+         id="pago"
+
+         style="display:none;margin-top:30px;">
 
         <h2>Pago del trámite</h2>
 
@@ -551,7 +554,9 @@ button{
         <div class="datoPago">
 
             <span id="cbu">
+
                 0000003100000000000000
+
             </span>
 
             <button
@@ -569,7 +574,9 @@ button{
         <div class="datoPago">
 
             <span id="alias">
+
                 REPROGREEN.PAGOS
+
             </span>
 
             <button
@@ -582,15 +589,18 @@ button{
 
         </div>
 
-        <label>Adjuntar comprobante</label>
+        <label>
+
+            Adjuntar comprobante
+
+        </label>
 
         <input
             type="file"
-            id="documentacion">
+            id="comprobante"
+            required>
 
-        <button
-            type="button"
-            onclick="confirmarPago()">
+        <button onclick="confirmarPago()">
 
             Confirmar Pago
 
@@ -604,40 +614,65 @@ button{
 
 function enviarRenovacion(){
 
-    let tramite = document.getElementById("tramite").value.trim();
-    let dni = document.getElementById("dni").value.trim();
-    let telefono = document.getElementById("telefono").value.trim();
-    let email = document.getElementById("email").value.trim();
+    let tramite = document.getElementById("tramite");
+    let dni = document.getElementById("dni");
+    let telefono = document.getElementById("telefono");
+    let email = document.getElementById("email");
     let archivo = document.getElementById("archivoRenovacion");
 
-    if(
-        tramite==="" ||
-        dni==="" ||
-        telefono==="" ||
-        email===""
-    ){
-
-        alert("⚠️ Debe completar todos los campos.");
-
+    if(tramite.value.trim() === ""){
+        alert("⚠️ Ingresá el número de trámite.");
+        tramite.focus();
         return;
-
     }
 
-    if(archivo.files.length===0){
+    if(dni.value.trim() === ""){
+        alert("⚠️ Ingresá el DNI.");
+        dni.focus();
+        return;
+    }
 
+    if(!/^\d{7,8}$/.test(dni.value.trim())){
+        alert("⚠️ El DNI debe tener 7 u 8 números.");
+        dni.focus();
+        return;
+    }
+
+    if(telefono.value.trim() === ""){
+        alert("⚠️ Ingresá el teléfono.");
+        telefono.focus();
+        return;
+    }
+
+    if(!/^\d{8,15}$/.test(telefono.value.trim())){
+        alert("⚠️ El teléfono solo debe contener números.");
+        telefono.focus();
+        return;
+    }
+
+    if(email.value.trim() === ""){
+        alert("⚠️ Ingresá el correo electrónico.");
+        email.focus();
+        return;
+    }
+
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())){
+        alert("⚠️ Ingresá un correo electrónico válido.");
+        email.focus();
+        return;
+    }
+
+    if(archivo.files.length === 0){
         alert("⚠️ Debe adjuntar la documentación.");
-
         return;
-
     }
 
-    let numero="REPRO-"+Math.floor(Math.random()*100000);
+    let numero = "REPRO-" + Math.floor(Math.random() * 100000);
 
-    localStorage.setItem("tramite",numero);
+    localStorage.setItem("tramite", numero);
 
-    document.querySelectorAll(".tarjeta")[0].style.display="none";
-
-    document.getElementById("pago").style.display="block";
+    document.querySelectorAll(".tarjeta")[0].style.display = "none";
+    document.getElementById("pago").style.display = "block";
 
     document.querySelectorAll(".paso")[1].classList.add("activo");
 
@@ -645,19 +680,18 @@ function enviarRenovacion(){
 
 function confirmarPago(){
 
-    let comprobante=document.getElementById("documentacion");
+    let comprobante = document.getElementById("comprobante");
 
-    if(comprobante.files.length===0){
+    if(comprobante.files.length === 0){
 
         alert("⚠️ Debe adjuntar el comprobante de pago.");
-
         return;
 
     }
 
     document.querySelectorAll(".paso")[2].classList.add("activo");
 
-    window.location="confirmacion.html";
+    window.location.href = "confirmacion.html";
 
 }
 
