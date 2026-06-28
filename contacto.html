@@ -236,16 +236,29 @@ RESPONSIVE
 
 @media (max-width:768px){
 
-body{
+html {
+  min-height: 100%;
+   background:#eef3f8 url("img/fondo-mobile.png") no-repeat top center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; 
+  background-size: cover; /* Esto hace que cubra toda la pantalla siempre */
+}
 
-    background:#eef3f8 url("img/fondo-mobile.png") no-repeat top center;
+body {
+  min-height: 100dvh; /* Ocupa 100% de la altura del celu, se adapta a la barra */
+  margin: 0;
+  background: transparent; /* Para que se vea la img del html de atrás */
+  display: flex;
+  flex-direction: column;
+}
 
-    background-size:100% auto;
-
-    background-attachment:scroll;
-
-    padding-top:30px;
-
+/* Para que el footer verde quede siempre abajo */
+main, .contenido {
+  flex: 1;
+}
+footer {
+  margin-top: auto;
 }
 
 .container{
