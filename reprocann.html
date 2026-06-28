@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<title>Nosotros | REPROGREEN</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+
+    background:#E8F0F4; 
+    background-image: url("img/fondo.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size:100% auto;
+
+    min-height:100vh;
+}
+
+.contenedor{
+    width:100%;
+    max-width:700px;
+    margin:0 auto;
+    padding:180px 30px 120px;
+    background-color:#eef3f8;
+    position:relative;
+    z-index:1;
+}
+
+.cards-container {
+  display: flex;              /* Al lado */
+  gap: 0;                     /* Sin espacio porque usamos borde */
+  justify-content: center;
+  align-items: stretch;       /* Que las 2 midan lo mismo de alto */
+  max-width: 880px;           /* Ancho del recuadro total */
+  margin: 40px auto;
+  background-color: #F4F7F5;  /* Fondo verde sutil exacto de tu foto */
+  border: 1px solid #E0E6E2;  /* Borde gris verdoso suave */
+  border-radius: 10px;        /* Bordes redondeados */
+  padding: 28px 0;            /* Padding arriba/abajo, 0 a los costados */
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;                    /* Ocupa 50% cada una */
+  padding: 0 32px;            /* Aire interno izq/der */
+  text-align: left;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+/* Esta es la línea divisoria vertical del medio */
+.card:last-child {
+  border-left: 1px solid #DDE3DF;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.card-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: #1E6F3D; /* Verde oscuro igual al de tu icono */
+  flex-shrink: 0;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #3A4A40; /* Gris oscuro verdoso */
+  margin: 0;
+  line-height: 1.3;
+}
+
+.card-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #7A8780; /* Gris claro del cuerpo */
+  margin: 0;
+}
+
+/* Responsive: en celu se apilan y la línea pasa abajo */
+@media (max-width: 720px) {
+  .cards-container {
+    flex-direction: column;
+    padding: 24px 0;
+  }
+  .card:last-child {
+    border-left: none;
+    border-top: 1px solid #DDE3DF;
+    padding-top: 24px;
+    margin-top: 24px;
+  }
+}
+
+.reprocann-permite {
+  max-width: 880px;
+  margin: 48px auto;
+  margin-left: 0;
+  padding: 0 20px;
+  font-family:Arial,sans-serif;
+  padding-left: 2px;
+}
+
+.reprocann-permite h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2F3E35; /* Negro verdoso oscuro */
+  margin: 0 0 20px 0;
+  line-height: 1.3;
+}
+
+.reprocann-list {
+  list-style: none; /* Sacamos los puntitos */
+  padding: 0;
+  margin: 0;
+}
+
+.reprocann-list li {
+  display: flex;
+  align-items: flex-start; /* Para que la tilde quede arriba si el texto ocupa 2 líneas */
+  gap: 12px;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #4A5A50; /* Gris oscuro */
+  margin-bottom: 14px;
+}
+
+.reprocann-list li:last-child {
+  margin-bottom: 0;
+}
+
+.reprocann-list .check {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 3px; /* Para alinearlo con la primera línea de texto */
+}
+
+.reprocann-list .check svg {
+  width: 100%;
+  height: 100%;
+  fill: #1E6F3D; /* Verde igual al de los títulos */
+}
+
+.reprocann-importante {
+  max-width: 880px;
+  margin: 40px auto 0 auto;
+  padding: 28px 24px;
+  background-color: #F4F7F5; /* Fondo blanco */
+  border: 1px solid #EAECEA; /* Borde gris muy clarito */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height:92px;
+}
+
+.importante-texto {
+  flex: 1;
+}
+
+.importante-titulo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1E6F3D; /* Verde del título */
+  margin: 0 0 6px 0;
+}
+
+.importante-p {
+  font-size: 14;
+  line-height: 1.5;
+  color: #7A8780; /* Gris oscuro */
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .reprocann-importante {
+    flex-direction: column-reverse; /* En celu el icono va arriba */
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+footer{
+    background:#1E6F3D;
+    color:white;
+
+    text-align:center;
+
+    padding:18px 10px;
+
+}
+
+.footer-line{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin:8px 0;
+}
+
+.footer-line span{
+    width:70px;
+    height:1px;
+    background:rgba(255,255,255,.35);
+}
+
+
+main{
+
+max-width:820px;
+
+margin:0 auto;
+
+padding: 200px 25px 40px;
+
+}
+
+.subtitulo{
+
+font-size:14px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#1f7d4d;
+
+}
+
+.titulo{
+
+font-size:48px;
+
+font-weight:700;
+
+color:#1f7d4d;
+
+margin-top:8px;
+
+}
+
+.linea{
+
+width:70px;
+
+height:4px;
+
+background:#1f7d4d;
+
+border-radius:30px;
+
+margin:18px 0 35px;
+
+}
+
+.intro{
+
+font-size:17px;
+
+line-height:1.9;
+
+color:#666;
+
+margin-bottom:22px;
+
+}
+
+/*==========================
+CELULAR
+==========================*/
+
+@media (max-width:768px){
+
+body{
+
+    background:#eef3f8 url("img/fondomobile.png") no-repeat top center;
+
+    background-size:cover;
+
+    background-attachment:scroll;
+
+}
+
+/* Banner */
+
+.banner{
+    height:170px;
+}
+
+.banner img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+}
+
+/* Contenido */
+
+.contenedor{
+    width:100%;
+    padding:150px 22px 40px;
+}
+
+.titulo-superior{
+    font-size:14px;
+    letter-spacing:3px;
+}
+
+h1{
+    font-size:58px;
+    line-height:1.05;
+    margin:8px 0 15px;
+}
+
+.subtitulo{
+    font-size:18px;
+    line-height:1.6;
+    max-width:100%;
+}
+
+.menu-btn{
+    top:18px;
+    right:18px;
+}
+
+}
+
+@media (max-width:480px){
+
+.banner{
+    height:145px;
+}
+
+.contenedor{
+    padding:130px 18px 35px;
+}
+
+.titulo-superior{
+    font-size:12px;
+}
+
+h1{
+    font-size:44px;
+}
+
+.subtitulo{
+    font-size:16px;
+    line-height:1.5;
+}
+
+.menu-btn{
+    width:46px;
+    height:46px;
+    top:15px;
+    right:15px;
+}
+
+}
+
+/*==========================
+BANNER
+==========================*/
+
+.hero{
+
+    width:100%;
+
+    background:#fff;
+
+}
+
+.hero picture{
+
+    display:block;
+
+    width:100%;
+
+}
+
+.hero img{
+
+    display:block;
+
+    width:100%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+@media(max-width:768px){
+
+.hero img{
+
+    width:100%;
+
+}
+
+.hero img{
+
+    width:100%;
+
+}
+
+main{
+
+    padding:100px 18px 0;
+
+}
+
+}
+
+/*==========================
+MENU LATERAL
+==========================*/
+
+.menu-btn{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    width:52px;
+    height:52px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:white;
+
+    border-radius:14px;
+
+    color:#1E7D32;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+    z-index:9999;
+
+    transition:.25s;
+
+}
+
+.menu-btn:hover{
+
+    transform:scale(1.05);
+
+}
+
+.menu-btn.oculto{
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:998;
+
+}
+
+.overlay.activo{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.menu-lateral{
+
+    position:fixed;
+
+    top:0;
+
+    right:-320px;
+
+    width:300px;
+
+    height:100vh;
+
+    background:white;
+
+    box-shadow:-5px 0 25px rgba(0,0,0,.18);
+
+    transition:.35s;
+
+    z-index:999;
+
+    padding-top:20px;
+
+}
+
+.menu-lateral.abierto{
+
+    right:0;
+
+}
+
+.menu-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.menu-header h2{
+
+    color:#1E7D32;
+
+}
+
+.menu-header span{
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}
+
+.menu-lateral a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:18px 24px;
+
+    color:#333;
+
+    text-decoration:none;
+
+    border-bottom:1px solid #f2f2f2;
+
+    transition:.25s;
+
+}
+
+.menu-lateral a:hover{
+
+    background:#edf8f0;
+
+    color:#1E7D32;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="overlay" class="overlay" onclick="cerrarMenu()"></div>
+
+<nav id="menuLateral" class="menu-lateral">
+
+    <div class="menu-header">
+
+        <h2>REPROGREEN</h2>
+
+        <span onclick="cerrarMenu()">
+            <i class="fas fa-times"></i>
+        </span>
+
+    </div>
+
+    <a href="index.html">
+        <i class="fas fa-house"></i>
+        Inicio
+    </a>
+
+    <a href="nosotros.html">
+        <i class="fas fa-users"></i>
+        Nosotros
+    </a>
+
+    <a href="requisitos.html">
+        <i class="fas fa-list-check"></i>
+        Requisitos
+    </a>
+
+    <a href="preguntas.html">
+        <i class="fas fa-circle-question"></i>
+        Preguntas Frecuentes
+    </a>
+
+    <a href="contacto.html">
+        <i class="fas fa-headset"></i>
+        Contacto / Soporte
+    </a>
+
+    <a href="terminos.html">
+        <i class="fas fa-file-contract"></i>
+        Términos y Condiciones
+    </a>
+
+    <a href="privacidad.html">
+        <i class="fas fa-shield-halved"></i>
+        Política de Privacidad
+    </a>
+
+</nav>
+
+<div class="menu-btn" onclick="abrirMenu()">
+    <i class="fas fa-bars"></i>
+</div>
+
+<main>
+
+<span class="subtitulo">
+
+REPROGREEN
+
+</span>
+
+<h2 class="titulo">
+
+¿Qué es REPROCANN?
+
+</h2>
+
+<div class="linea"></div>
+
+<p class="intro">
+
+REPROCANN es el Registro del Programa de Cannabis (RNPC) que permite a las personas autorizadas cultivar cannabis con fines medicinales, terapéuticos y/o paliativos, de acuerdo a la legislación vigente en Argentina.
+
+</p>
+
+<p class="intro">
+
+Este registro garantiza el acceso seguro, legal y controlado al cultivo para uso personal o para terceros autorizados.
+
+</p>
+
+<div class="cards-container">
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon">
+        <!-- Icono 1: Dos personas para "Su objetivo" -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+        </svg>
+      </div>
+      <h3 class="card-title">Su objetivo</h3>
+    </div>
+    <p class="card-text">
+      Garantizar el acceso seguro al cannabis medicinal, 
+      promoviendo el uso responsable y el derecho a la salud.
+    </p>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon">
+        <!-- Icono 2: Una persona para "¿A quién está dirigido?" -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+        </svg>
+      </div>
+      <h3 class="card-title">¿A quién está dirigido?</h3>
+    </div>
+    <p class="card-text">
+      A pacientes con indicación médica y a sus representantes 
+      legales o personas autorizadas para el cultivo.
+    </p>
+  </div>
+</div>
+
+<section class="reprocann-permite">
+  <h2>¿Qué permite REPROCANN?</h2>
+  <ul class="reprocann-list">
+    <li>
+      <span class="check">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+        </svg>
+      </span>
+      Cultivar cannabis con fines medicinales, terapéuticos y/o paliativos.
+    </li>
+    <li>
+      <span class="check">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+        </svg>
+      </span>
+      Brinda seguridad jurídica a pacientes y cultivadores autorizados.
+    </li>
+    <li>
+      <span class="check">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+        </svg>
+      </span>
+      Acceder al cultivo personal o para terceros autorizados.
+    </li>
+    <li>
+      <span class="check">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+        </svg>
+      </span>
+      Formar parte de un programa oficial y regulado por el Estado.
+    </li>
+  </ul>
+</section>
+
+<div class="reprocann-importante">
+  <div class="importante-texto">
+    <p class="importante-titulo">Importante</p>
+    <p class="importante-p">
+      REPROCANN no es una autorización para comercializar. 
+      <br>Su finalidad es garantizar el acceso al cultivo controlado para fines de salud.
+    </p>
+  </div>
+</div>
+
+</div> <!-- cierra .importante-box -->
+
+<div style="height: 50px;"></div> <!-- ESPACIADOR REAL -->
+
+</main>
+
+<footer>
+
+    <div class="footer-content">
+
+        <p>Portal de Gestión REPROCANN</p>
+
+        <div class="footer-line">
+    <span></span>
+    🌿
+    <span></span>
+</div>
+
+        <small>
+            © 2026 REPROGREEN - Todos los derechos reservados.
+        </small>
+
+    </div>
+
+</footer>
+
+<style>
+
+footer{
+
+margin-top:0px;
+
+background:#1E6F3D;
+
+padding:18px 10px;
+
+text-align:center;
+
+color:white;
+
+}
+
+.footer{
+
+max-width:1200px;
+
+margin:auto;
+
+text-align:center;
+
+}
+
+.footer p{
+
+color:#fff;
+
+font-size:15px;
+
+letter-spacing:.5px;
+
+}
+
+</style>
+
+<script>
+
+function abrirMenu(){
+
+    document.getElementById("menuLateral").classList.add("abierto");
+    document.getElementById("overlay").classList.add("activo");
+    document.querySelector(".menu-btn").classList.add("oculto");
+
+}
+
+function cerrarMenu(){
+
+    document.getElementById("menuLateral").classList.remove("abierto");
+    document.getElementById("overlay").classList.remove("activo");
+    document.querySelector(".menu-btn").classList.remove("oculto");
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -261,76 +261,28 @@ FOOTER
 ==========================*/
 
 footer{
-
     background:#1E6F3D;
-
-    color:#fff;
-
-    margin-top:50px;
-
-    padding:30px 20px;
+    color:white;
 
     text-align:center;
 
-}
+    padding:18px 10px;
 
-.footer-content{
-
-    max-width:700px;
-
-    margin:0 auto;
-
-}
-
-.footer-content p{
-
-    font-size:17px;
-
-    margin-bottom:10px;
-
+    margin-top:auto;
 }
 
 .footer-line{
-
-    width:180px;
-
-    margin:15px auto;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     gap:12px;
-
-}
-
-.footer-line::before,
-.footer-line::after{
-
-    content:"";
-
-    flex:1;
-
-    height:1px;
-
-    background:rgba(255,255,255,.35);
-
+    margin:8px 0;
 }
 
 .footer-line span{
-
-    font-size:17px;
-
-}
-
-.footer-content small{
-
-    font-size:14px;
-
-    opacity:.9;
-
+    width:70px;
+    height:1px;
+    background:rgba(255,255,255,.35);
 }
 
 /*==========================
@@ -504,7 +456,16 @@ RESPONSIVE
 ==================================*/
 
 /* Monitores grandes */
-@media (max-width:2000px){
+
+@media (max-width:2500px){
+
+    .inicio{
+        padding-top:370px;
+    }
+
+}
+
+@media (max-width:1900px){
 
     .inicio{
         padding-top:280px;
@@ -512,12 +473,29 @@ RESPONSIVE
 
 }
 
+@media (max-width:1600px){
+
+    .inicio{
+        padding-top:280px;
+    }
+
+}
+
+@media (max-width:1500px){
+
+    .inicio{
+        padding-top:230px;
+    }
+
+}
+
 /* Notebook */
 @media (max-width:1400px){
 
-    .inicio{
-        padding-top:300px;
-    }
+   .inicio{
+    background-size:100% auto;
+    padding-top:15%;
+}
 
     .cards{
         grid-template-columns:repeat(4,1fr);
@@ -530,18 +508,10 @@ RESPONSIVE
 @media (max-width:1200px){
 
     .inicio{
-
-    width:100%;
-
-    margin:0 auto;
-
     background:url("img/bannermob.png") no-repeat top center;
-
-    background-size:cover;
-
-    padding-top:550px;
-    }
-
+    background-size:100% auto;
+    padding-top:58%;
+}
     .cards{
         grid-template-columns:repeat(2,1fr);
     }
@@ -552,13 +522,10 @@ RESPONSIVE
 @media (max-width:900px){
 
     .inicio{
-
-        background:url("img/bannermob.png") no-repeat top center;
-        background-size:100% auto;
-
-        padding-top:330px;
-
-    }
+    background:url("img/bannermob.png") no-repeat top center;
+    background-size:100% auto;
+    padding-top:58%;
+}
 
     .cards{
 
@@ -594,17 +561,9 @@ RESPONSIVE
 @media (max-width:600px){
 
     .inicio{
-
-    width:100%;
-
-    margin:0 auto;
-
     background:url("img/bannermob.png") no-repeat top center;
-
-    background-size:cover;
-
-    padding-top:350px;
-
+    background-size:100% auto;
+    padding-top:54%;
 }
 
     .cards{
@@ -1030,8 +989,10 @@ MENU LATERAL
         <p>Portal de Gestión REPROCANN</p>
 
         <div class="footer-line">
-            <span>🌿</span>
-        </div>
+    <span></span>
+    🌿
+    <span></span>
+</div>
 
         <small>
             © 2026 REPROGREEN - Todos los derechos reservados.
