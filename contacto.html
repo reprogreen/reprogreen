@@ -18,11 +18,21 @@
 BODY
 ==========================*/
 
+html{
+    height:100%;
+}
+
 body{
 
-    background:#eef3f8 url("img/fondo-mobile.png") no-repeat top center;
+    background:#eef3f8 url("img/fondo.png") no-repeat top center;
 
     background-size:cover;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
 
     background-position:top center;
 
@@ -37,7 +47,7 @@ CONTENEDOR
 .container{
     width:100%;
     max-width:620px;
-    margin:200px auto 40px;
+    margin:200px auto 0px;
     padding:0;
 }
 
@@ -234,15 +244,15 @@ footer{
 RESPONSIVE
 ==========================*/
 
-@media (max-width:768px){
+@media (max-width:2100px){
 
 html {
   min-height: 100%;
-   background:#eef3f8 url("img/fondo-mobile.png") no-repeat top center;
+  background:#eef3f8 url("img/fondo-mobile.png") no-repeat top center;
   background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed; 
-  background-size: cover; /* Esto hace que cubra toda la pantalla siempre */
+  background-position: top center;
+  background-attachment: scroll; 
+  background-size: 100% auto; /* Esto hace que cubra toda la pantalla siempre */
 }
 
 body {
@@ -265,7 +275,83 @@ footer {
 
     padding:0 15px 20px;
     width:100%;
-    margin:40px auto 0;
+    margin:100px auto 0;
+    max-width:620px;
+
+}
+
+.logo{
+
+    max-width:340px;
+
+}
+
+.tarjeta{
+
+    padding:22px;
+    border-radius:18px;
+    margin-top:0;
+
+}
+
+.tarjeta h2{
+
+    font-size:24px;
+
+}
+
+.progreso{
+
+    transform:scale(.90);
+    margin:10px auto 8px;
+
+}
+
+.linea{
+
+    width:45px;
+
+}
+
+button{
+
+    font-size:16px;
+
+}
+}
+
+@media (max-width:768px){
+
+html {
+  min-height: 100%;
+  background:#eef3f8 url("img/fondo-mobile.png") no-repeat top center;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: scroll; 
+  background-size: 100% auto; /* Esto hace que cubra toda la pantalla siempre */
+}
+
+body {
+  min-height: 100dvh; /* Ocupa 100% de la altura del celu, se adapta a la barra */
+  margin: 0;
+  background: transparent; /* Para que se vea la img del html de atrás */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Para que el footer verde quede siempre abajo */
+main, .contenido {
+  flex: 1;
+}
+footer {
+  margin-top: auto;
+}
+
+.container{
+
+    padding:0 15px 20px;
+    width:100%;
+    margin:100px auto 0;
     max-width:620px;
 
 }

@@ -177,37 +177,47 @@ body{
   fill: #1E6F3D; /* Verde igual al de los títulos */
 }
 
-.reprocann-importante {
-  max-width: 880px;
-  margin: 40px auto 0 auto;
-  padding: 28px 24px;
-  background-color: #F4F7F5; /* Fondo blanco */
-  border: 1px solid #EAECEA; /* Borde gris muy clarito */
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  min-height:92px;
-}
+.help {
+    margin-top: 24px;
+    border: 1px solid #EAECEA;
+    border-radius: 14px;
+    padding: 22px;
+    background: #F4F7F5;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom:32px;
+  }
 
-.importante-texto {
-  flex: 1;
-}
+  .help .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #F0F7F2;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    color: #127A46;
+  }
 
-.importante-titulo {
-  font-size: 22px;
-  font-weight: 700;
-  color: #1E6F3D; /* Verde del título */
-  margin: 0 0 6px 0;
-}
+  .help p {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: #374151;
+  }
 
-.importante-p {
-  font-size: 14;
-  line-height: 1.5;
-  color: #7A8780; /* Gris oscuro */
-  margin: 0;
-}
+  .help a {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0A4F2F;
+    text-decoration: none;
+    display: inline-flex;
+    align-items:;
+    gap: 6px;
+  }
+  .help a:hover { text-decoration: underline; }
 
 @media (max-width: 560px) {
   .reprocann-importante {
@@ -643,6 +653,11 @@ MENU LATERAL
         Nosotros
     </a>
 
+    <a href="reprocann.html">
+        <i class="fas fa-cannabis"></i>
+        ¿Qué es REPROCANN?
+    </a>
+
     <a href="requisitos.html">
         <i class="fas fa-list-check"></i>
         Requisitos
@@ -651,11 +666,6 @@ MENU LATERAL
     <a href="preguntas.html">
         <i class="fas fa-circle-question"></i>
         Preguntas Frecuentes
-    </a>
-
-    <a href="soporte.html">
-        <i class="fas fa-headset"></i>
-        Contacto / Soporte
     </a>
 
     <a href="terminos.html">
@@ -684,7 +694,7 @@ REPROGREEN
 
 <h2 class="titulo">
 
-¿Qué es REPROCANN?
+Contacto / Soporte
 
 </h2>
 
@@ -692,13 +702,13 @@ REPROGREEN
 
 <p class="intro">
 
-REPROCANN es el Registro del Programa de Cannabis (RNPC) que permite a las personas autorizadas cultivar cannabis con fines medicinales, terapéuticos y/o paliativos, de acuerdo a la legislación vigente en Argentina.
+Estamos para ayudarte.
 
 </p>
 
 <p class="intro">
 
-Este registro garantiza el acceso seguro, legal y controlado al cultivo para uso personal o para terceros autorizados.
+En REPROGREEN acompañamos a nuestros usuarios durante todo el proceso de gestión relacionado con REPROCANN. Nuestro equipo está disponible para brindar orientación, responder consultas y ofrecer asistencia administrativa de forma clara y perzonalizada.
 
 </p>
 
@@ -711,11 +721,24 @@ Este registro garantiza el acceso seguro, legal y controlado al cultivo para uso
           <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
         </svg>
       </div>
-      <h3 class="card-title">Su objetivo</h3>
+      <h3 class="card-title">
+    ¿En qué podemos ayudarte?
+      </h3>
     </div>
     <p class="card-text">
-      Garantizar el acceso seguro al cannabis medicinal, 
-      promoviendo el uso responsable y el derecho a la salud.
+      Renovación de inscripciones.
+    </p>
+    <p class="card-text">
+      Consulta del estado de trámites.
+    </p>
+    <p class="card-text">
+      Requisitos y documentación necesaria.
+    </p>
+    <p class="card-text">
+      Inconvenientes durante el uso del portal.
+    </p>
+    <p class="card-text">
+      Consultas generales sobre nuestro servicio.
     </p>
   </div>
 
@@ -727,66 +750,40 @@ Este registro garantiza el acceso seguro, legal y controlado al cultivo para uso
           <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
         </svg>
       </div>
-      <h3 class="card-title">¿A quién está dirigido?</h3>
+      <h3 class="card-title">Información de contacto</h3>
     </div>
     <p class="card-text">
-      A pacientes con indicación médica y a sus representantes 
-      legales o personas autorizadas para el cultivo.
+      Correo electrónico: reprogreen.arg@gmail.com
+    </p>
+    <p class="card-text">
+      Teléfono: +54 9 11 1234 5678
+    </p>
+    <p class="card-text">
+      WhatsApp: +54 9 11 1234 5678
+    </p>
+    <p class="card-text">
+      Horario de atención: Lunes a Viernes de 9:00 a 18:00 hs.
     </p>
   </div>
 </div>
 
 <section class="reprocann-permite">
-  <h2>¿Qué permite REPROCANN?</h2>
-  <ul class="reprocann-list">
-    <li>
-      <span class="check">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-        </svg>
-      </span>
-      Cultivar cannabis con fines medicinales, terapéuticos y/o paliativos.
-    </li>
-    <li>
-      <span class="check">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-        </svg>
-      </span>
-      Brinda seguridad jurídica a pacientes y cultivadores autorizados.
-    </li>
-    <li>
-      <span class="check">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-        </svg>
-      </span>
-      Acceder al cultivo personal o para terceros autorizados.
-    </li>
-    <li>
-      <span class="check">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-        </svg>
-      </span>
-      Formar parte de un programa oficial y regulado por el Estado.
-    </li>
-  </ul>
+  <h2>Nuestro compromiso</h2>
+  <p class="intro">
+Trabajamos para ofrecer una atención rápida, clara y profesional. Cada consulta es revisada por nuestro equipo con el objetivo de brindar una respuesta precisa y acompañarte durante todo el proceso.
+</p>
 </section>
 
-<div class="reprocann-importante">
-  <div class="importante-texto">
-    <p class="importante-titulo">Importante</p>
-    <p class="importante-p">
-      REPROCANN no es una autorización para comercializar. 
-      <br>Su finalidad es garantizar el acceso al cultivo controlado para fines de salud.
-    </p>
+<div class="help">
+      <div class="icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      </div>
+      <div>
+        <p>¿No encontraste lo que buscás? Escribinos y te ayudamos.</p>
+        <a href="contacto.html" class="contact-link">Ir a contacto <span>→</span></a>
+      </div>
+    </div>
   </div>
-</div>
-
-</div> <!-- cierra .importante-box -->
-
-<div style="height: 50px;"></div> <!-- ESPACIADOR REAL -->
 
 </main>
 

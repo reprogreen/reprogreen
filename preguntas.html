@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<title>Nosotros | REPROGREEN</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+
+    background:#E8F0F4; 
+    background-image: url("img/fondo.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size:100% auto;
+
+    min-height:100vh;
+}
+
+.contenedor{
+    width:100%;
+    max-width:700px;
+    margin:0 auto;
+    padding:180px 30px 120px;
+    background-color:#eef3f8;
+    position:relative;
+    z-index:1;
+}
+
+.wrap {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .kicker {
+    font-size: 13px;
+    font-weight: 700;
+    color: #127A46;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+  }
+
+  h1 {
+    font-size: 44px;
+    font-weight: 800;
+    color: #0A4F2F;
+    line-height: 1.05;
+    margin: 0 0 14px;
+  }
+
+  .rule {
+    width: 44px;
+    height: 4px;
+    background: #127A46;
+    border-radius: 2px;
+    margin-bottom: 18px;
+  }
+
+  .intro {
+    font-size: 16px;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0 0 32px;
+    max-width: 540px;
+  }
+
+  .faq {
+    display: grid;
+    gap: 12px;
+  }
+
+  .item {
+    background-color: #F4F7F5; /* Fondo blanco */
+    border: 1px solid #EAECEA; /* Borde gris muy clarito */
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .item button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0A4F2F;
+  }
+
+  .item button:hover {
+    background: #F9FAFB;
+  }
+
+  .chevron {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #127A46;
+    transition: transform .25s ease;
+  }
+  
+  .item.open .chevron {
+    transform: rotate(180deg);
+  }
+
+  .panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .3s ease;
+  }
+
+  .item.open .panel {
+    grid-template-rows: 1fr;
+  }
+
+  .panel > div {
+    overflow: hidden;
+  }
+
+  .panel p {
+    padding: 0 20px 20px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #374151;
+  }
+
+  .help {
+    margin-top: 24px;
+    border: 1px solid #EAECEA;
+    border-radius: 14px;
+    padding: 22px;
+    background: #F4F7F5;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom:32px;
+  }
+
+  .help .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #F0F7F2;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    color: #127A46;
+  }
+
+  .help p {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: #374151;
+  }
+
+  .help a {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0A4F2F;
+    text-decoration: none;
+    display: inline-flex;
+    align-items:;
+    gap: 6px;
+  }
+  .help a:hover { text-decoration: underline; }
+
+
+@media (max-width: 560px) {
+  .reprocann-importante {
+    flex-direction: column-reverse; /* En celu el icono va arriba */
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+footer{
+    background:#1E6F3D;
+    color:white;
+
+    text-align:center;
+
+    padding:18px 10px;
+
+}
+
+.footer-line{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin:8px 0;
+}
+
+.footer-line span{
+    width:70px;
+    height:1px;
+    background:rgba(255,255,255,.35);
+}
+
+
+main{
+
+max-width:820px;
+
+margin:0 auto;
+
+padding: 200px 25px 40px;
+
+}
+
+.subtitulo{
+
+font-size:14px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#1f7d4d;
+
+}
+
+.titulo{
+
+font-size:48px;
+
+font-weight:700;
+
+color:#1f7d4d;
+
+margin-top:8px;
+
+}
+
+.linea{
+
+width:70px;
+
+height:4px;
+
+background:#1f7d4d;
+
+border-radius:30px;
+
+margin:18px 0 35px;
+
+}
+
+.intro{
+
+font-size:17px;
+
+line-height:1.9;
+
+color:#666;
+
+margin-bottom:22px;
+
+}
+
+/*==========================
+CELULAR
+==========================*/
+
+@media (max-width:768px){
+
+body{
+
+    background:#eef3f8 url("img/fondomobile.png") no-repeat top center;
+
+    background-size:cover;
+
+    background-attachment:scroll;
+
+}
+
+/* Banner */
+
+.banner{
+    height:170px;
+}
+
+.banner img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+}
+
+/* Contenido */
+
+.contenedor{
+    width:100%;
+    padding:150px 22px 40px;
+}
+
+.titulo-superior{
+    font-size:14px;
+    letter-spacing:3px;
+}
+
+h1{
+    font-size:58px;
+    line-height:1.05;
+    margin:8px 0 15px;
+}
+
+.subtitulo{
+    font-size:18px;
+    line-height:1.6;
+    max-width:100%;
+}
+
+.menu-btn{
+    top:18px;
+    right:18px;
+}
+
+}
+
+@media (max-width:480px){
+
+.banner{
+    height:145px;
+}
+
+.contenedor{
+    padding:130px 18px 35px;
+}
+
+.titulo-superior{
+    font-size:12px;
+}
+
+h1{
+    font-size:44px;
+}
+
+.subtitulo{
+    font-size:16px;
+    line-height:1.5;
+}
+
+.menu-btn{
+    width:46px;
+    height:46px;
+    top:15px;
+    right:15px;
+}
+
+}
+
+/*==========================
+BANNER
+==========================*/
+
+.hero{
+
+    width:100%;
+
+    background:#fff;
+
+}
+
+.hero picture{
+
+    display:block;
+
+    width:100%;
+
+}
+
+.hero img{
+
+    display:block;
+
+    width:100%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+@media(max-width:768px){
+
+.hero img{
+
+    width:100%;
+
+}
+
+.hero img{
+
+    width:100%;
+
+}
+
+main{
+
+    padding:100px 18px 0;
+
+}
+
+}
+
+/*==========================
+MENU LATERAL
+==========================*/
+
+.menu-btn{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    width:52px;
+    height:52px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:white;
+
+    border-radius:14px;
+
+    color:#1E7D32;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+    z-index:9999;
+
+    transition:.25s;
+
+}
+
+.menu-btn:hover{
+
+    transform:scale(1.05);
+
+}
+
+.menu-btn.oculto{
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:998;
+
+}
+
+.overlay.activo{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.menu-lateral{
+
+    position:fixed;
+
+    top:0;
+
+    right:-320px;
+
+    width:300px;
+
+    height:100vh;
+
+    background:white;
+
+    box-shadow:-5px 0 25px rgba(0,0,0,.18);
+
+    transition:.35s;
+
+    z-index:999;
+
+    padding-top:20px;
+
+}
+
+.menu-lateral.abierto{
+
+    right:0;
+
+}
+
+.menu-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.menu-header h2{
+
+    color:#1E7D32;
+
+}
+
+.menu-header span{
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}
+
+.menu-lateral a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:18px 24px;
+
+    color:#333;
+
+    text-decoration:none;
+
+    border-bottom:1px solid #f2f2f2;
+
+    transition:.25s;
+
+}
+
+.menu-lateral a:hover{
+
+    background:#edf8f0;
+
+    color:#1E7D32;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="overlay" class="overlay" onclick="cerrarMenu()"></div>
+
+<nav id="menuLateral" class="menu-lateral">
+
+    <div class="menu-header">
+
+        <h2>REPROGREEN</h2>
+
+        <span onclick="cerrarMenu()">
+            <i class="fas fa-times"></i>
+        </span>
+
+    </div>
+
+    <a href="index.html">
+        <i class="fas fa-house"></i>
+        Inicio
+    </a>
+
+    <a href="nosotros.html">
+        <i class="fas fa-users"></i>
+        Nosotros
+    </a>
+
+    <a href="reprocann.html">
+        <i class="fas fa-cannabis"></i>
+        ¿Qué es REPROCANN?
+    </a>
+
+    <a href="requisitos.html">
+        <i class="fas fa-list-check"></i>
+        Requisitos
+    </a>
+
+    <a href="soporte.html">
+        <i class="fas fa-headset"></i>
+        Contacto / Soporte
+    </a>
+
+    <a href="terminos.html">
+        <i class="fas fa-file-contract"></i>
+        Términos y Condiciones
+    </a>
+
+    <a href="privacidad.html">
+        <i class="fas fa-shield-halved"></i>
+        Política de Privacidad
+    </a>
+
+</nav>
+
+<div class="menu-btn" onclick="abrirMenu()">
+    <i class="fas fa-bars"></i>
+</div>
+
+<main>
+
+<span class="subtitulo">
+
+REPROGREEN
+
+</span>
+
+<h2 class="titulo">
+
+Pregutas frecuentes
+
+</h2>
+
+<div class="linea"></div>
+
+<p class="intro">
+
+Encontrá respuestas a las dudas más comunes sobre el Portal de Gestión REPROCANN.
+
+</p>
+
+    <div class="faq">
+      
+      <div class="item">
+        <button type="button">
+          <span>¿Qué es REPROCANN?</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="panel"><div><p>REPROCANN (Registro del Programa de Cannabis) es el sistema que permite registrar a las personas autorizadas para el cultivo controlado de cannabis con fines medicinales, terapéuticos y/o paliativos del dolor, conforme a la normativa vigente.</p></div></div>
+      </div>
+
+      <div class="item">
+        <button type="button">
+          <span>¿Qué es REPROGREEN?</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="panel"><div><p>REPROGREEN es una plataforma de gestión encargada del proceso administrativo de inscripción, renovación y seguimiento de trámites relacionados con REPROCANN. Nuestro objetivo es brindar asistencia durante cada etapa del proceso.</p></div></div>
+      </div>
+
+      <div class="item">
+        <button type="button">
+          <span>¿Cómo inicio una nueva solicitud?</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="panel"><div><p>Ingresá a la sección Nueva Solicitud, completá todos los datos requeridos y verificá que la información ingresada sea correcta antes de enviarla. Una vez enviada, recibirás un número de gestión para realizar el seguimiento.</p></div></div>
+      </div>
+
+      <div class="item">
+        <button type="button">
+          <span>¿Cómo realizo una renovación?</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="panel"><div><p>Seleccioná la opción Renovación, completá el formulario correspondiente y verificá que la información esté actualizada antes de enviarla.</p></div></div>
+      </div>
+
+      <div class="item">
+        <button type="button">
+          <span>¿Cómo consulto el estado de mi trámite?</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="panel"><div><p>Desde tu panel en el Portal. Los estados son: Pendiente, En evaluación, Observado, Autorizado o Rechazado.</p></div></div>
+      </div>
+
+      <div class="item">
+        <button type="button">
+          <span>¿Puedo modificar los datos de mi solicitud?</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="panel"><div><p>Una vez enviada la solicitud, algunos datos podrían no ser modificables. Si necesitás realizar cambios, comunicate con nuestro equipo para recibir orientación sobre los pasos a seguir.</p></div></div>
+      </div>
+
+      <div class="item">
+        <button type="button">
+          <span>¿Mis datos personales están protegidos?</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="panel"><div><p>Sí. La información proporcionada es tratada de forma confidencial y utilizada únicamente para la gestión del trámite, conforme a la normativa vigente sobre protección de datos personales.</p></div></div>
+      </div>
+
+      <div class="item">
+        <button type="button">
+          <span>¿Cómo puedo comunicarme con REPROGREEN?</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="panel"><div><p>Si necesitás asistencia o tenés alguna consulta, comunícate por Whatsapp o dirigite a la sección Contacto, donde podrás enviarnos tu mensaje y nuestro equipo responderá a la brevedad.</p></div></div>
+      </div>
+
+    </div>
+
+    <div class="help">
+      <div class="icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      </div>
+      <div>
+        <p>¿No encontraste lo que buscás? Escribinos y te ayudamos.</p>
+        <a href="contacto.html" class="contact-link">Ir a contacto <span>→</span></a>
+      </div>
+    </div>
+  </div>
+
+<script>
+  document.querySelectorAll('.faq .item button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.item');
+      const wasOpen = item.classList.contains('open');
+      
+      // Cierro todos
+      document.querySelectorAll('.faq .item').forEach(i => i.classList.remove('open'));
+      
+      // Si no estaba abierto, lo abro. Si estaba, queda todo cerrado.
+      if (!wasOpen) {
+        item.classList.add('open');
+      }
+    });
+  });
+</script>
+
+</main>
+
+<footer>
+
+    <div class="footer-content">
+
+        <p>Portal de Gestión REPROCANN</p>
+
+        <div class="footer-line">
+    <span></span>
+    🌿
+    <span></span>
+</div>
+
+        <small>
+            © 2026 REPROGREEN - Todos los derechos reservados.
+        </small>
+
+    </div>
+
+</footer>
+
+<style>
+
+footer{
+
+margin-top:0px;
+
+background:#1E6F3D;
+
+padding:18px 10px;
+
+text-align:center;
+
+color:white;
+
+}
+
+.footer{
+
+max-width:1200px;
+
+margin:auto;
+
+text-align:center;
+
+}
+
+.footer p{
+
+color:#fff;
+
+font-size:15px;
+
+letter-spacing:.5px;
+
+}
+
+</style>
+
+<script>
+
+function abrirMenu(){
+
+    document.getElementById("menuLateral").classList.add("abierto");
+    document.getElementById("overlay").classList.add("activo");
+    document.querySelector(".menu-btn").classList.add("oculto");
+
+}
+
+function cerrarMenu(){
+
+    document.getElementById("menuLateral").classList.remove("abierto");
+    document.getElementById("overlay").classList.remove("activo");
+    document.querySelector(".menu-btn").classList.remove("oculto");
+
+}
+
+</script>
+
+</body>
+
+</html>
