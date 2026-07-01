@@ -2,10 +2,32 @@ exports.handler = async (event) => {
   const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
   const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
-  try {
-    const { mensaje } = JSON.parse(event.body);
+  if (event.httpMethod !== "POST") {
+    return {
+      statusCode: 405,
+      body: "Método no permitido",
+    };
+  }
 
-    const response = await fetch(
+  try {
+    const datos = JSON.parse(event.body);
+
+    const mensaje = `
+🟢 NUEVA SOLICITUD REPROGREEN
+
+👤 Nombre: ${datos.nombre}
+🪪 DNI: ${datos.dni}
+📞 Teléfono: ${datos.telefono}
+📧 Email: ${datos.email}
+
+💳 Comprobante de pago: ✅ Adjuntado
+
+🆔 Trámite: ${datos.tramite}
+
+🕒 Fecha: ${new Date().toLocaleString("es-AR")}
+`;
+
+    const respuesta = await fetch(
       `https://api.telegram.org/bot${TOKEN}/sendMessage`,
       {
         method: "POST",
@@ -19,16 +41,22 @@ exports.handler = async (event) => {
       }
     );
 
-    const data = await response.json();
+    const resultado = await respuesta.json();
 
     return {
       statusCode: 200,
-      body: JSON.stringify(data),
+      body: JSON.stringify(resultado),
     };
-  } catch (err) {
+
+  } catch (error) {
+
     return {
       statusCode: 500,
-      body: JSON.stringify(err),
+      body: JSON.stringify({
+        error: error.message,
+      }),
     };
+
   }
+
 };
