@@ -1020,6 +1020,29 @@ function cerrarMenu(){
 
 }
 
+async function registrarVisitante() {
+
+    if (localStorage.getItem("visitanteRegistrado")) {
+        return;
+    }
+
+    await fetch("/.netlify/functions/telegram", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            tipo: "visitante"
+        })
+    });
+
+    localStorage.setItem("visitanteRegistrado", "SI");
+}
+
+window.addEventListener("load", registrarVisitante);
+
+window.addEventListener("load", registrarVisitante);
+
 </script>
 
 </body>

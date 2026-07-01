@@ -12,7 +12,52 @@ exports.handler = async (event) => {
   try {
     const datos = JSON.parse(event.body);
 
-    const mensaje = `
+   let mensaje = "";
+
+if (datos.tipo === "visitante") {
+
+    mensaje = `
+🟢 NUEVO VISITANTE
+
+🕒 Fecha: ${new Date().toLocaleString("es-AR")}
+`;
+
+} else if (datos.tipo === "renovacion") {
+
+    mensaje = `
+♻️ RENOVACIÓN REPROCANN
+
+👤 Nombre: ${datos.nombre}
+🪪 DNI: ${datos.dni}
+📞 Teléfono: ${datos.telefono}
+📧 Email: ${datos.email}
+
+💳 Comprobante de pago: ✅ Adjuntado
+
+🆔 Trámite: ${datos.tramite}
+
+🕒 Fecha: ${new Date().toLocaleString("es-AR")}
+`;
+
+if (datos.tipo === "contacto") {
+
+    mensaje = `
+📩 NUEVO MENSAJE DE CONTACTO
+
+👤 Nombre: ${datos.nombre}
+📧 Email: ${datos.email}
+
+💬 Mensaje:
+${datos.mensaje}
+
+🕒 Fecha: ${new Date().toLocaleString("es-AR")}
+`;
+
+}
+
+} else {
+
+    mensaje = `
 🟢 NUEVA SOLICITUD REPROGREEN
 
 👤 Nombre: ${datos.nombre}
@@ -26,6 +71,8 @@ exports.handler = async (event) => {
 
 🕒 Fecha: ${new Date().toLocaleString("es-AR")}
 `;
+
+}
 
     const respuesta = await fetch(
       `https://api.telegram.org/bot${TOKEN}/sendMessage`,

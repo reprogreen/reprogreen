@@ -680,7 +680,7 @@ function enviarRenovacion(){
 
 }
 
-function confirmarPago(){
+async function confirmarPago(){
 
     let comprobante = document.getElementById("comprobante");
 
@@ -690,6 +690,23 @@ function confirmarPago(){
         return;
 
     }
+
+    const datos = {
+    tipo: "renovacion",
+    nombre: document.getElementById("nombre").value,
+    dni: document.getElementById("dni").value,
+    telefono: document.getElementById("telefono").value,
+    email: document.getElementById("email").value,
+    tramite: localStorage.getItem("tramite")
+};
+
+await fetch("/.netlify/functions/telegram", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(datos)
+});
 
     document.querySelectorAll(".paso")[2].classList.add("activo");
 
