@@ -12,14 +12,18 @@ exports.handler = async (event) => {
   try {
     const datos = JSON.parse(event.body);
 
-   let mensaje = "";
+const fecha = new Date().toLocaleString("es-AR", {
+    timeZone: "America/Argentina/Buenos_Aires"
+});
+
+let mensaje = "";
 
 if (datos.tipo === "visitante") {
 
     mensaje = `
 🟢 NUEVO VISITANTE
 
-🕒 Fecha: ${new Date().toLocaleString("es-AR")}
+🕒 Fecha: ${fecha}
 `;
 
 } else if (datos.tipo === "renovacion") {
@@ -36,7 +40,7 @@ if (datos.tipo === "visitante") {
 
 🆔 Trámite: ${datos.tramite}
 
-🕒 Fecha: ${new Date().toLocaleString("es-AR")}
+🕒 Fecha: ${fecha}
 `;
 
 if (datos.tipo === "contacto") {
@@ -50,7 +54,7 @@ if (datos.tipo === "contacto") {
 💬 Mensaje:
 ${datos.mensaje}
 
-🕒 Fecha: ${new Date().toLocaleString("es-AR")}
+🕒 Fecha: ${fecha}
 `;
 
 }
@@ -69,7 +73,7 @@ ${datos.mensaje}
 
 🆔 Trámite: ${datos.tramite}
 
-🕒 Fecha: ${new Date().toLocaleString("es-AR")}
+🕒 Fecha: ${fecha}
 `;
 
 }
