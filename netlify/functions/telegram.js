@@ -43,10 +43,14 @@ exports.handler = async (event) => {
 
     const resultado = await respuesta.json();
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify(resultado),
-    };
+return {
+  statusCode: 200,
+  body: JSON.stringify({
+    telegram: resultado,
+    token: TOKEN ? "OK" : "NO",
+    chat: CHAT_ID
+  }),
+};
 
   } catch (error) {
 
